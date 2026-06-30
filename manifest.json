@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.1",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.1/gsmtool-1.0.1.zip",
-  "release_notes": "Test: encryption and license validation",
+  "latest_version": "1.0.2",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.2/gsmtool-1.0.2.zip",
+  "release_notes": "Test in-app update flow",
   "released_at": "2026-06-30",
   "min_php": "7.4"
 }
