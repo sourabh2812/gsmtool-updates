@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.12",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.12/gsmtool-1.0.12.zip",
-  "release_notes": "Test diff-based packaging: only changed files shipped, deleted files removed on update",
+  "latest_version": "1.0.13",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.13/gsmtool-1.0.13.zip",
+  "release_notes": "",
   "released_at": "2026-07-01",
   "min_php": "7.4"
 }
