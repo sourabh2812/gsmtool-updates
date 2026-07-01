@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.10",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.10/gsmtool-1.0.10.zip",
-  "release_notes": "Security hardening: bolt key protection & license IP enforcement\n\nBolt Key Protection (4 layers)\n- _GsmTK::g() now verifies the calling file's first line matches the exact encrypted stub format before returning the key. Template files, root PHP files, and any injected code receive null instead of the key.\n- On-disk key cache is XOR'd with GSMTOOL_KEY_SALT env var (set at deploy time) so reading the /tmp cache file alone is useless without the process environment.\n- Every key request to the Cloudflare worker includes a Unix timestamp and HMAC-SHA256(ts, license.sig). Requests older than 5 minutes are rejected, preventing replay of captured request bodies.\n- allowed_ips is now required in every license. Licenses with an empty IP list are rejected by both the PHP check and the Cloudflare worker.\n\nLicense IP Check Fix\n- Fixed a false positive on Docker-hosted installs where SERVER_ADDR is the container-internal IP rather than 127.0.0.1. The localhost exemption now also triggers when HTTP_HOST is localhost, which is the reliable signal in Docker environments.",
+  "latest_version": "1.0.11",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.11/gsmtool-1.0.11.zip",
+  "release_notes": "",
   "released_at": "2026-07-01",
   "min_php": "7.4"
 }
