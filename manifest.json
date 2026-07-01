@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.4",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.4/gsmtool-1.0.4.zip",
-  "release_notes": "Minor improvements and bug fixes",
+  "latest_version": "1.0.5",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.5/gsmtool-1.0.5.zip",
+  "release_notes": "New update widget testing",
   "released_at": "2026-07-01",
   "min_php": "7.4"
 }
