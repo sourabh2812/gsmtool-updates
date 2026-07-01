@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.5",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.5/gsmtool-1.0.5.zip",
-  "release_notes": "New update widget testing",
+  "latest_version": "1.0.6",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.6/gsmtool-1.0.6.zip",
+  "release_notes": "Redesigned update page with two-column layout and 4-step progress tracker; improved dashboard update banner with dismiss button fix",
   "released_at": "2026-07-01",
   "min_php": "7.4"
 }
