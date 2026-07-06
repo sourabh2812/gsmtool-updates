@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.15",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.15/gsmtool-1.0.15.zip",
-  "release_notes": "",
+  "latest_version": "1.0.16",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.16/gsmtool-1.0.16.zip",
+  "release_notes": "Buy-credits payment icons + PayPal billing fields",
   "released_at": "2026-07-06",
   "min_php": "7.4"
 }
