@@ -1,6 +1,10 @@
 {
-  "demo.gsmfusiontool.com": {
-    "status": "active",
-    "support_end": "2026-07-06"
+  "generated_at": "2026-07-07T01:01:09Z",
+  "sig": "zwZe6gruiiMgT6IrqbMLN0NN0f/ZLWYRWlbHYvlmd73M651a1/cUkx3IhxzfxypWJ1vCJniTDm5XXsanNX/CRpjVICRsnM5zghkAskmBHrwzOdYCCMSP8JFhoPDqqRr/JJGBAQMK4FGG7mBFJC/KebBJXajmM7fnLD/qoKPbgscbg89b/bgasfFb1PS7s97uiHOsswz5HIvTl0R6h8dwa6r/UvSsfHeFg5uzY+rxHykbT6rLCXHzFdsC62nAQ6oXgOeo6Wlzp2kSaXwv8eRJ5yiXR89XPPHo82RHWLVOJY9czba3cs4ZM/zl59IOqGSiGAO23Nn2n4D0lM7XTYqmLg==",
+  "statuses": {
+    "demo.gsmfusiontool.com": {
+      "status": "active",
+      "support_end": "2026-07-06"
+    }
   }
 }
