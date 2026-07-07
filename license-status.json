@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-07T01:01:09Z",
-  "sig": "zwZe6gruiiMgT6IrqbMLN0NN0f/ZLWYRWlbHYvlmd73M651a1/cUkx3IhxzfxypWJ1vCJniTDm5XXsanNX/CRpjVICRsnM5zghkAskmBHrwzOdYCCMSP8JFhoPDqqRr/JJGBAQMK4FGG7mBFJC/KebBJXajmM7fnLD/qoKPbgscbg89b/bgasfFb1PS7s97uiHOsswz5HIvTl0R6h8dwa6r/UvSsfHeFg5uzY+rxHykbT6rLCXHzFdsC62nAQ6oXgOeo6Wlzp2kSaXwv8eRJ5yiXR89XPPHo82RHWLVOJY9czba3cs4ZM/zl59IOqGSiGAO23Nn2n4D0lM7XTYqmLg==",
+  "generated_at": "2026-07-07T01:21:54Z",
+  "sig": "KnrGSa7ewCTa8t8je3d72eyNOItJI4OVToDExBZFmVpVqEGJ6X8f6RDJoArds01opH1u9O2xiXbM2/V7vjT2TMKZem3wCvY8QiI/gREFIWaBXb4l2PDi4WS2P2GrCrWike6m/eRhfzDZneY0mP6duVZrB6vnSmfuroJ0J7hN47CibirwySge+SZc11meRkrsL/gwXgb8S3StZXBfut18A6MOUObCyMWnZD9CLHSJtPL/o1UI8QwbQodCNLTK5YhI4+W8tOixj9HAc372VbPF6wK0EIByYDugmsVMwdyOjdrOt83sMKBqjRQd2PsxEYvSf3UNco0OGGUUzH0yy7Uo1Q==",
   "statuses": {
     "demo.gsmfusiontool.com": {
-      "status": "active",
+      "status": "suspended",
       "support_end": "2026-07-06"
     }
   }
