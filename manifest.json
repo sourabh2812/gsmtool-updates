@@ -1,0 +1,7 @@
+{
+  "latest_version": "1.0.19",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.19/gsmtool-1.0.19.zip",
+  "release_notes": "- Credits Added: \"This Month\" and \"This Year\" now use the calendar month and year (from the 1st / from Jan 1) instead of a rolling 30-day / 12-month window, and respect the store's timezone.\n- Profit (dashboard + Profit/Loss report): now counts orders by their completion date (when completed/replied), not the order-placed date. Only completed orders are included, so profit falls in the period the order was actually completed.\n- The header \"Full Screen\" action is hidden on small/mobile screens on every page except the dashboard.\n- Reverted the enlarged header logo from 1.0.18 back to the standard size.",
+  "released_at": "2026-07-08",
+  "min_php": "7.4"
+}
