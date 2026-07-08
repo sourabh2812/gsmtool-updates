@@ -1,7 +1,7 @@
 {
   "latest_version": "1.0.18",
   "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.18/gsmtool-1.0.18.zip",
-  "release_notes": "",
+  "release_notes": "- Larger, clearer brand logo in the admin and client panel headers.\n- Dashboard \"Pending/Accepted Orders\" quick-status menus are now mobile-friendly: the chevron toggle stays visible on phones, the menu opens compactly within the screen (no more off-screen overflow on the right-hand card), and shows New / Accepted / Completed / Rejected on small screens. Desktop keeps the full menu.",
   "released_at": "2026-07-08",
   "min_php": "7.4"
 }
