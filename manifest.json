@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.21",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.21/gsmtool-1.0.21.zip",
-  "release_notes": "",
+  "latest_version": "1.0.22",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.22/gsmtool-1.0.22.zip",
+  "release_notes": "SMS overhaul (Twilio 7.x + Textbelt), SMS Logs, responsive admin login, social link previews\n\n- Provider-based SMS gateways: Twilio SDK updated 6.40 to 7.16 and Textbelt added as a new provider; the gateway form adapts its fields to the selected provider. Removed the retired Infobip integration.\n- Per-workflow SMS toggles: enable order notifications individually (Successful/Cancelled IMEI, File and Server orders) from Settings > SMS. Replaces the old single Send SMS switch.\n- Order and OTP SMS now validate the recipient phone number (E.164) before sending, and support a new #DOMAINNAME# template placeholder.\n- New SMS Logs page (under SMS Gateways): every message sent is logged with order no, customer, message id and an on-demand delivery-status check; includes a purge option.\n- The admin login page is now responsive on mobile.\n- Fixed admin login console errors: missing jQuery Validation script, rotating background images and a favicon 404.\n- Added Open Graph / Twitter meta tags so shared links (WhatsApp, Facebook) show a proper title, description and site icon.",
   "released_at": "2026-07-09",
   "min_php": "7.4"
 }
