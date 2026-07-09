@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.20",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.20/gsmtool-1.0.20.zip",
-  "release_notes": "- Client profile now shows the account email address (read-only), listed after the name fields.\n- Service search on the order pages (IMEI, Server, File) now filters correctly and fully restores the list when the search box is cleared.\n- The admin header \"Full Screen\" action is now shown only on desktop / large screens and hidden on mobile / small screens.",
-  "released_at": "2026-07-08",
+  "latest_version": "1.0.21",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.21/gsmtool-1.0.21.zip",
+  "release_notes": "",
+  "released_at": "2026-07-09",
   "min_php": "7.4"
 }
