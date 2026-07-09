@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.23",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.23/gsmtool-1.0.23.zip",
-  "release_notes": "SMS notifications: opt-out model with per-client control\n\n- Order-notification SMS is now opt-out. With a workflow enabled in Settings > SMS, every client with a valid phone number receives the notification unless they have opted out. The old per-customer and per-service Send SMS requirements are gone.\n- Clients can turn SMS off themselves from My Profile (Receive SMS Notifications), which overrides the global setting for that client.\n- Removed the admin per-user Send SMS checkbox from the client edit page (clients now manage their own preference).",
+  "latest_version": "1.0.24",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.24/gsmtool-1.0.24.zip",
+  "release_notes": "Profile phone: store in E.164 (+ prefix) so SMS is deliverable\n\n- The customer profile now saves the phone number in E.164 format, adding the leading + automatically when missing. This matches the signup format and the SMS gateway requirement; previously numbers entered on the profile page were saved without a + and were silently skipped for SMS.\n- Clarified the profile phone caption.",
   "released_at": "2026-07-09",
   "min_php": "7.4"
 }
