@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.26",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.26/gsmtool-1.0.26.zip",
-  "release_notes": "Make signup OTP editable + remove obsolete SMS Integration menu\n\n- Signup OTP is now the editable 'SMS Verification At Signup' template (Templates > SMS Templates); register.php substitutes #COMPANY_NAME# / #OTP_CODE# with a fallback.\n- Removes the obsolete SMS Integration menu + pages (legacy bulk SendSMS toggles), superseded by per-workflow toggles + client opt-out. Migration removes menu rows, orphan role permissions, and seeds the OTP template.",
-  "released_at": "2026-07-09",
+  "latest_version": "1.0.27",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.27/gsmtool-1.0.27.zip",
+  "release_notes": "Re-assert SMS Templates menu for installs that skipped 1.0.25\n\n- The updater applies only the target release's migration, so installs that jumped a version never ran 1.0.25's db.sql and were missing the SMS Templates menu entry despite having the pages. Idempotently re-adds the tbl_gf_forms row.",
+  "released_at": "2026-07-10",
   "min_php": "7.4"
 }
