@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.27",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.27/gsmtool-1.0.27.zip",
-  "release_notes": "Re-assert SMS Templates menu for installs that skipped 1.0.25\n\n- The updater applies only the target release's migration, so installs that jumped a version never ran 1.0.25's db.sql and were missing the SMS Templates menu entry despite having the pages. Idempotently re-adds the tbl_gf_forms row.",
+  "latest_version": "1.0.28",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.28/gsmtool-1.0.28.zip",
+  "release_notes": "Newsletter batch scheduler + API-services pricing fixes + SMS throttle\n\n- Newsletter batch scheduler with batching, delay (sec/min/hr), start time + timezone, progress/completion dashboard, dedicated template, test send, guest subscribers, per-recipient unsubscribe, and a Newsletters menu group.\n- API Services: Set-Price-Margins popup updates Price on save; below-cost prices bold red.\n- SMS: short pause between consecutive gateway sends.",
   "released_at": "2026-07-10",
   "min_php": "7.4"
 }
