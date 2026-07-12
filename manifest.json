@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.34",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.34/gsmtool-1.0.34.zip",
-  "release_notes": "Fix invisible order-search bar and admin language selector showing wrong language\n\nSearch bar (customer order pages)\n- The \"Search Orders\" accordion header was invisible: the modern theme forces\n  .card-header { background:#fff !important }, which overrode the inline per-theme\n  colour, leaving the white (\"text-light\") toggle text on a white bar. Restyled the\n  #accordion search header coherently \u2014 a clean light bar with dark text, an emerald\n  magnifier and a state chevron \u2014 always readable regardless of the user's ThemeColor.\n  Also themed the Search button (slate). Covers IMEI, File and Server order lists and\n  the credit-history search (all share #accordion).\n\nAdmin language selector\n- The top-header language dropdown always showed the US flag / \"US\" no matter which\n  language was selected. The trigger now reflects the current language\n  ($_SESSION['LANGUAGE_BE']) via a code -> flag/label map (falls back to English).",
+  "latest_version": "1.0.35",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.35/gsmtool-1.0.35.zip",
+  "release_notes": "Backfill missing translation labels so non-English UIs no longer show blanks\n\nNewer features added ~160+ label variables to the English language files that were\nnever backfilled to the other languages, so those labels rendered blank in every\nnon-English language (admin and client). Filled every missing $BE_*/$CUST_* variable\nacross all admin (admincp/languages) and client (languages) files with the English\nvalue as a graceful fallback \u2014 3,186 admin + 1,278 client labels \u2014 so the UI shows\nreadable text everywhere instead of blanks. Existing translations are untouched; the\nbackfilled entries are English placeholders that can be professionally translated later.",
   "released_at": "2026-07-12",
   "min_php": "7.4"
 }
