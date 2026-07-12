@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.37",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.37/gsmtool-1.0.37.zip",
-  "release_notes": "Extend localization to all supported languages (menu + labels)\n\nAdded menu/UI translations for every supported language (now 15: Spanish, French,\nGerman, Italian, Portuguese, Russian, Polish, Romanian, Dutch, Chinese Simplified,\nHungarian, Swedish, Vietnamese, Lithuanian, Farsi) in the admin menu translation\nlayer (menu_i18n.php), so the side/top menu localizes for all of them.\n\nRe-ran the label backfill translator across all 15 languages: labels whose English\nvalue maps to a menu term are now translated (only where still an untranslated English\nfallback, so existing translations are preserved). Languages that previously had the\nmost gaps (Dutch, Swedish) gained ~90 translated labels each. Remaining untranslated\nlabels keep the English fallback.",
+  "latest_version": "1.0.38",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.38/gsmtool-1.0.38.zip",
+  "release_notes": "Fix admin menu/labels lagging one reload behind the language switch\n\nThe admin menu is built by formsmgmt.php (via gf_menu_tr, which reads\n$_SESSION['LANGUAGE_BE'] at build time), but that ran BEFORE switchlanguage.php\napplied the ?ln= parameter to the session. So on a language switch the menu was\nrendered in the previous language while the dropdown already showed the new one \u2014\nyou had to reload once more for the menu/labels to catch up.\n\nNow the ?ln= parameter is applied to the session immediately, before formsmgmt.php\nbuilds the menu, so the menu and labels reflect the selected language on the same\nrequest. Verified by simulating the request sequence: \"Manage Clients\" now renders as\n\"Gestionar clientes\" on the switch request instead of staying English.\n\n(The customer panel was already correct \u2014 switchlanguage_nw.php runs before the theme\nmenu renders, so its labels switch on the same request.)",
   "released_at": "2026-07-12",
   "min_php": "7.4"
 }
