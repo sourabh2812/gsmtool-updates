@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.33",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.33/gsmtool-1.0.33.zip",
-  "release_notes": "Fix admin footer copyright not re-centering when the sidebar collapses\n\nThe 1.0.32 footer centering keyed off metronic's page-sidebar-closed class and a\n225px sidebar width, but this admin's sidebar is driven by gsm-sidebar.css: it is\n278px wide and collapses to a 66px rail via body.gsm-rail (not page-sidebar-closed),\nand it shifts .page-content but never .footer. As a result the copyright centered\ncorrectly when expanded but stayed put on collapse.\n\nFooter left offset now mirrors gsm-sidebar.css's content margins exactly (278px\nexpanded, 66px on body.gsm-rail) with the same .18s transition, so the copyright\nre-centers smoothly on expand/collapse. All of this is scoped to desktop\n(min-width: 992px); mobile keeps the theme default (no footer adjustment).",
+  "latest_version": "1.0.34",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.34/gsmtool-1.0.34.zip",
+  "release_notes": "Fix invisible order-search bar and admin language selector showing wrong language\n\nSearch bar (customer order pages)\n- The \"Search Orders\" accordion header was invisible: the modern theme forces\n  .card-header { background:#fff !important }, which overrode the inline per-theme\n  colour, leaving the white (\"text-light\") toggle text on a white bar. Restyled the\n  #accordion search header coherently \u2014 a clean light bar with dark text, an emerald\n  magnifier and a state chevron \u2014 always readable regardless of the user's ThemeColor.\n  Also themed the Search button (slate). Covers IMEI, File and Server order lists and\n  the credit-history search (all share #accordion).\n\nAdmin language selector\n- The top-header language dropdown always showed the US flag / \"US\" no matter which\n  language was selected. The trigger now reflects the current language\n  ($_SESSION['LANGUAGE_BE']) via a code -> flag/label map (falls back to English).",
   "released_at": "2026-07-12",
   "min_php": "7.4"
 }
