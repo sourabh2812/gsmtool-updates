@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.50",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.50/gsmtool-1.0.50.zip",
-  "release_notes": "feat(orders): add \"None\" IMEI field type + fix false-success on empty IMEI\n\nAdds a fifth IMEI Field Type, \"None (Custom Fields Only)\", for services\nthat take only custom fields and no IMEI/SN (e.g. case-history removal).\nSuch a service shows only its configured custom fields and places a single\norder with an empty IMEINo. Existing types 0-3 are unchanged.\n\nAlso fixes a real bug: submitting an IMEI service with an empty/invalid\nIMEI produced NO order but still redirected to success. The success\nredirect is now gated on an order row actually being inserted\n(ORDER_ACTUALLY_PLACED from mysqli_affected_rows); if nothing was placed\nthe user is returned to the order page with a clear error and no charge.\n\n- services_tab_general.php: 5th radio (value 4).\n- package.js: hide the Custom Field dropdown for the new radio.\n- imeiorder.js: type 4 hides all IMEI inputs, shows only custom fields.\n- submitimeiorder.php: type 4 places one order with empty IMEI; success\n  redirect gated on actual placement.\n\n(cherry picked from commit c422b191409ecddd499e6fae4c22bbeee60e441a)",
+  "latest_version": "1.0.51",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.51/gsmtool-1.0.51.zip",
+  "release_notes": "fix(orders): URL-encode redirect messages to prevent blank screen\n\nThe order-result redirect embedded the message straight into a\nsingle-quoted JS string (window.location.href='...&msge=<msg>'). Language\nstrings such as the English insufficient-credits message (\"You don't\nhave sufficient credits...\") contain an apostrophe, which broke the JS\nstring so the redirect never fired and the user got a blank page. Wrap\nevery msge value in rawurlencode() so quotes/spaces/specials are safe;\nthe receiving page still decodes and displays it correctly.\n\n(cherry picked from commit d39bc8df4ec134fda457c056751f7e9b0250df27)",
   "released_at": "2026-07-13",
   "min_php": "7.4"
 }
