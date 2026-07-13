@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.41",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.41/gsmtool-1.0.41.zip",
-  "release_notes": "Stop HTMLPurifier from truncating custom-field values (GSX reports etc.)\n\nCustomer/reseller order placement ran custom-field VALUES through\n$purifier->purify(). HTMLPurifier is an HTML sanitizer: when a value\ncontains a '<' that looks like the start of a tag (common when pasting a\nGSX 'Full info with Case History' report, a serial, or copied markup),\nit treats the rest as an unclosed tag and DROPS everything after it \u2014\nsilently truncating the field mid-content (e.g. order 101089 lost its\nentire Case History section).\n\nReplace purify() with check_input(strip_tags(...)) for custom-field\nvalues in all placement paths (placeimeiorder, placeserverorder, order,\nregister, myprofile, api/placeorder CUSTOMFIELD, gsmfusion_api server\ncustom fields). strip_tags removes every tag (still XSS-safe against\n<script> injection) but never drops trailing text. Matches the admin\nside, which already uses check_input() without purify() for these fields.",
+  "latest_version": "1.0.42",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.42/gsmtool-1.0.42.zip",
+  "release_notes": "Fix Supplier Services dropdown not refreshing on API change (package.php)\n\nOn the service API tab, changing 'Assign an API' fetched the new API's\nservices correctly but only did $('#supplierPackId').html(response).\n#supplierPackId is a Select2 (v3) widget, which caches its rendered\nselection \u2014 replacing the <option>s doesn't update the display, so it\nkept showing the PREVIOUS API's service and you had to switch APIs\nseveral times before it looked right.\n\nRebuild the Select2 after loading (destroy -> html -> re-init) so the\nnew API's services show immediately on every change. Also removed the\n$.ajaxStart/ajaxStop loader binding that was re-registered on every\ncall (global handlers accumulating) in favour of a direct show/.always(hide).",
   "released_at": "2026-07-13",
   "min_php": "7.4"
 }
