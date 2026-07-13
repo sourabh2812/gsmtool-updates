@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.43",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.43/gsmtool-1.0.43.zip",
-  "release_notes": "Ship a clean custom-field seed for fresh installs\n\nThe install template seeded 38 custom fields with ZERO attachments and\nno products/services using them \u2014 every new customer inherited a tangle\nof supplier/IMEI fields (GSX, Case ID, MEID, MSLsn, SamKey TMO, Z3X...)\nthat were pure clutter.\n\nTrim the seed to the 5 generic shop/retail fields a default install\nactually needs (Serial No, Email, Quantity, Username, Password) and drop\nthe custom-field dropdown options (all belonged to removed fields). New\ncustomers now start clean and add their own fields as they build\nservices. AUTO_INCREMENT (77) leaves headroom so new fields never\ncollide with the seeded ones.",
+  "latest_version": "1.0.44",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.44/gsmtool-1.0.44.zip",
+  "release_notes": "feat: ship favicon set and reference it app-wide\n\nAdd the full favicon set (ico + 16/32 PNG + apple-touch + android-chrome +\nwebmanifest) at the web root so it ships with every install, and add a modern\nfavicon <link> block (falling back when no custom brand favicon is set) to the\nadmin, client, storefront and login heads using $BASE_URL. Fixes the missing\nfavicon and the console 404s.",
   "released_at": "2026-07-13",
   "min_php": "7.4"
 }
