@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.46",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.46/gsmtool-1.0.46.zip",
-  "release_notes": "fix: malformed detail-page queries + suppress warnings globally\n\nNews/service/page/product detail pages built their WHERE clause as\n\"... AND $strAnd\" but left $strAnd unset when the request had no id\n(e.g. hitting /news.php directly), producing a dangling \"AND\" and a\nCD14DB SQL syntax error on every such hit. Initialize $strAnd and skip\nthe detail query when there is no id to filter on (news.php,\nshop-newsdtl.php, servicedtl.php, shop-page.php, shop-product.php).\n\nAlso set error_reporting in db_c_n_f_g.php (the auto_prepend loader that\nruns before all app code) so the legacy codebase's harmless undefined\nvariable/array-key warnings are suppressed from the first line of every\nrequest \u2014 config.php sets the same level but some files (checkexpiry.php)\nrun before it. Fatals and CD14DB's own error_log logging are unaffected.\n\n(cherry picked from commit e8b0d99f5e591271cdc2c009f57b2ea3923c528e)",
+  "latest_version": "1.0.47",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.47/gsmtool-1.0.47.zip",
+  "release_notes": "fix: return clean 404 for missing .php instead of mod_php error\n\nRequests for non-existent .php files (bot scans for /aaa.php, /wp-xx.php,\netc.) made mod_php stat a missing script and log '[php:error] script not\nfound or unable to stat' before ErrorDocument ran. Rewrite missing .php\nrequests to /404.php so the PHP handler never runs on a missing file, and\nhave 404.php send a real 404 status.\n\n(cherry picked from commit 3873f1f15b2e8a5e89c54be3361e0fa264eea16e)",
   "released_at": "2026-07-13",
   "min_php": "7.4"
 }
