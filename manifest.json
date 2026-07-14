@@ -1,7 +1,7 @@
 {
-  "latest_version": "1.0.51",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v1.0.51/gsmtool-1.0.51.zip",
-  "release_notes": "fix(orders): URL-encode redirect messages to prevent blank screen\n\nThe order-result redirect embedded the message straight into a\nsingle-quoted JS string (window.location.href='...&msge=<msg>'). Language\nstrings such as the English insufficient-credits message (\"You don't\nhave sufficient credits...\") contain an apostrophe, which broke the JS\nstring so the redirect never fired and the user got a blank page. Wrap\nevery msge value in rawurlencode() so quotes/spaces/specials are safe;\nthe receiving page still decodes and displays it correctly.\n\n(cherry picked from commit d39bc8df4ec134fda457c056751f7e9b0250df27)",
-  "released_at": "2026-07-13",
-  "min_php": "7.4"
+  "latest_version": "2.0.1",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.1/gsmtool-2.0.1.zip",
+  "release_notes": "2.0.1 \u2014 PHP 8.3 hardening + dashboard/profile fixes\n\n- Fixed a PHP 8 fatal in the bundled nusoap SOAP library (a property was assigned on null at include time); also replaced a deprecated strftime() call and corrected a parameter order.\n- Binance Pay: corrected an invalid optional-before-required parameter order.\n- Server Log report: auto-detects the log directory so it works on shared/cPanel hosting, renders inside the admin panel, and shows a clear message when a log is empty.\n- Dashboards: \"Orders Completed This Month/Year\" and the customer \"Last 12 Months Completed\" chart now count by completion date instead of order-placed date.\n- Client dashboard: fixed a SQL error in the recent-receipts panel.\n- Profile: stopped the built-in address fields from appearing twice under the modern client theme (which also prevented a double-write on save).\n- Storefront: added static-asset browser caching and text compression.",
+  "released_at": "2026-07-14",
+  "min_php": "8.1"
 }
