@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.5",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.5/gsmtool-2.0.5.zip",
-  "release_notes": "Adapt API credential fields to the selected API type\n\nAPI Key becomes a Bearer-token textarea for DHRU Fusion Pro (normal input for other types); API Key-2 / API Password now show only for the 'Other' type that uses them.",
+  "latest_version": "2.0.6",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.6/gsmtool-2.0.6.zip",
+  "release_notes": "DHRU Fusion Pro: hide Username field, align API Key font\n\nHide the Username (Account ID) field for DHRU Fusion Pro (Bearer-token auth only); remove the monospace override so the API Key placeholder matches the other fields.",
   "released_at": "2026-07-15",
   "min_php": "8.1"
 }
