@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.4",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.4/gsmtool-2.0.4.zip",
-  "release_notes": "Add DHRU Fusion Pro API type; remove dead Hot Fusion & CodeskPro types\n\n- New supplier API type \"DHRU Fusion Pro\" (REST/JSON, Bearer-JWT): connection test, credit balance, IMEI + server service sync, custom-field sync/attach, order placement and status polling \u2014 full parity with classic DHRU Fusion, reusing the existing custom-field/order infrastructure.\n- Widened the API key columns to TEXT (tbl_gf_api.APIKey + OrderAPIKey on codes/codes_slbf/log_requests/retail_orders) so the ~800-char Bearer token fits (migration + template.sql).\n- Removed the dead Hot Fusion (type 1) and CodeskPro Server (type 3) API types and CodeskPro's dedicated files/branches.",
+  "latest_version": "2.0.5",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.5/gsmtool-2.0.5.zip",
+  "release_notes": "Adapt API credential fields to the selected API type\n\nAPI Key becomes a Bearer-token textarea for DHRU Fusion Pro (normal input for other types); API Key-2 / API Password now show only for the 'Other' type that uses them.",
   "released_at": "2026-07-15",
   "min_php": "8.1"
 }
