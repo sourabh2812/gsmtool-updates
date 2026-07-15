@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.8",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.8/gsmtool-2.0.8.zip",
-  "release_notes": "Fix updates skipping intermediate versions (files + migrations)\n\nEvery release is now a full catch-up snapshot; all migrations bundled and applied exactly once via tracking (non-idempotent ones never re-run). Fixes customers missing changes from skipped versions.",
+  "latest_version": "2.0.9",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.9/gsmtool-2.0.9.zip",
+  "release_notes": "Make the Manage API page theme-coherent and responsive\n\nRounded card connected to the tab bar + scoped responsive CSS: tabs scroll on narrow screens, labels stack on mobile, buttons full-width on phones.",
   "released_at": "2026-07-15",
   "min_php": "8.1"
 }
