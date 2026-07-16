@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.10",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.10/gsmtool-2.0.10.zip",
-  "release_notes": "Add Telegram order notifications for customers\n\nCustomers can now link their Telegram account from the dashboard (QR code / deep link) and receive instant order updates from the site's own bot: order received, completed, cancelled and resubmitted. New Settings -> Telegram admin tab validates the bot token and registers the webhook automatically. Includes bot commands /status and /stop, a per-customer notifications toggle, and a disconnect option.",
+  "latest_version": "2.0.11",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.11/gsmtool-2.0.11.zip",
+  "release_notes": "Redesign public site header and normalize public-page typography\n\nThe public header menu is now one coherent, customer-focused layout: sentence-case nav links with hover/active pills, a Login + Create Account CTA cluster (My Account + Logout when signed in), white card dropdowns, and a tap-friendly mobile accordion (whole-row toggles with a single rotating chevron indicator) replacing the flaky few-pixel caret targets. Public pages also move from an 11px base to the same 14px scale as the client and admin panels, so login, register and track-order no longer read smaller after logging out.",
   "released_at": "2026-07-16",
   "min_php": "8.1"
 }
