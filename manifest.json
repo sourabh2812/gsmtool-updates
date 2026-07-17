@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.12",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.12/gsmtool-2.0.12.zip",
-  "release_notes": "Theme-consistent Telegram banner button, env-based demo mode, hardened public fragments\n\nThree small improvements bundled in this release:\n\n- The Telegram banner's Connect Now button now inherits the exact metrics of the theme's other banner buttons (padding, weight, radius) \u2014 only its colors remain custom.\n- Demo mode: config.php now reads IS_DEMO from the GSMTOOL_DEMO environment variable (SetEnv in the vhost), so demo installs survive in-app updates without overlay files. Defaults to off everywhere the variable is unset.\n- Public header.php/footer.php include-fragments answer 404 when hit directly by bots instead of throwing uncaught fatals into error_log.",
+  "latest_version": "2.0.13",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.13/gsmtool-2.0.13.zip",
+  "release_notes": "Newsletter formatting freedom + CKEditor upgrade to 4.22.1\n\nTwo improvements to newsletter and content editing:\n\n- Newsletter bodies are now sent exactly as authored. The send paths no longer inject inline styles or a centered wrapper into the content \u2014 lists render normally (bullets with their text) and whatever formatting the admin composes in the newsletter editor takes effect as-is.\n- The admin rich-text editor (used across all editor pages: newsletters, news, pages, service descriptions, email templates, products, FAQs and more) is upgraded from CKEditor 4.12.1 to 4.22.1, the last open-source 4.x release, picking up the published 4.x XSS security fixes. The emojione plugin and editor configuration carry over; the obsolete flash and wsc plugins were removed upstream by CKEditor and are unused by the app.",
   "released_at": "2026-07-17",
   "min_php": "8.1"
 }
