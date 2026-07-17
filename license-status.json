@@ -1,10 +1,14 @@
 {
-  "generated_at": "2026-07-13T11:04:18Z",
-  "sig": "l/a+vYsYRZ+363c2jCIfAWb/FwDvctFRU8q4Y++uBtfOg/hNB1uHpWU3dcKsYIgQ+4NPdA5rERE3E0mBakYCYMWvKIzjJ6/ryxTgxDBBygpLwEFq8paebIW+S3QC456DsT/bEPVenDpQYWWXstNmqqYSv5RL2Nw0Gbukt9CG4pygIUS3EE/NGt2dzur+7jVjoaJ07dFnMA/kxflMNy+8pDROBQL5Wyy4et15dNB6wfPD+ekJDkHv19v4N46i93iHg144kgeS1HonS020iw9Elnopk+u/NpjBnXwMzwNExdkV2lrVt3wJnlybxomr0k6R+sydrZV42ezNoY3JdeAqWQ==",
+  "generated_at": "2026-07-17T17:30:19Z",
+  "sig": "o/OZ0tQfyoFE7uiQ1iClMwpXmPtWNkh/RhfrSVK5R6QjXYktIIj1cKm2PsQ2/BaewK/ZqjvnGDRXlrgKEfmFS73bxMJ2M/a31hL08nWiCm1nI2EAw+MymoG3afSQ9kCnbKMa3dJ4M/EBs7eTD6nSrBQDZis2NS/nnRDCqkGkN+UWbk3edm/wV2a6AqjS+uogeLNQo0z+lxBg22UTXNmRwXDqNZQCv4tGdkO9S67M6evmpOxSgxBSUfQge8oLVKifrRTrcDdWgj7aKqSkxIZOgOICEc8NZhwbqR6po6TnzjDQy2MZpVPG9NWLszpW4/lllRzmEvTuKdnAZdRqz7x5UA==",
   "statuses": {
     "demo.gsmfusiontool.com": {
       "status": "active",
-      "support_end": "2026-10-07"
+      "support_end": "2027-07-13"
+    },
+    "fastestunlocking.com": {
+      "status": "active",
+      "support_end": "2027-01-17"
     }
   }
 }
