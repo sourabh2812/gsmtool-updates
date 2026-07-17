@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.11",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.11/gsmtool-2.0.11.zip",
-  "release_notes": "Redesign public site header and normalize public-page typography\n\nThe public header menu is now one coherent, customer-focused layout: sentence-case nav links with hover/active pills, a Login + Create Account CTA cluster (My Account + Logout when signed in), white card dropdowns, and a tap-friendly mobile accordion (whole-row toggles with a single rotating chevron indicator) replacing the flaky few-pixel caret targets. Public pages also move from an 11px base to the same 14px scale as the client and admin panels, so login, register and track-order no longer read smaller after logging out.",
-  "released_at": "2026-07-16",
+  "latest_version": "2.0.12",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.12/gsmtool-2.0.12.zip",
+  "release_notes": "Theme-consistent Telegram banner button, env-based demo mode, hardened public fragments\n\nThree small improvements bundled in this release:\n\n- The Telegram banner's Connect Now button now inherits the exact metrics of the theme's other banner buttons (padding, weight, radius) \u2014 only its colors remain custom.\n- Demo mode: config.php now reads IS_DEMO from the GSMTOOL_DEMO environment variable (SetEnv in the vhost), so demo installs survive in-app updates without overlay files. Defaults to off everywhere the variable is unset.\n- Public header.php/footer.php include-fragments answer 404 when hit directly by bots instead of throwing uncaught fatals into error_log.",
+  "released_at": "2026-07-17",
   "min_php": "8.1"
 }
