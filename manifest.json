@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.15",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.15/gsmtool-2.0.15.zip",
-  "release_notes": "Preserve custom branding and uploads across updates\n\nUpdates no longer overwrite your uploaded logo, favicons, banners, or theme colors. The update package no longer contains the default branding assets, and the updater keeps any existing uploaded content in place.",
+  "latest_version": "2.0.16",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.16/gsmtool-2.0.16.zip",
+  "release_notes": "Password reset by email, admin listing usability, newsletter timezone and price-popup accuracy\n\nPassword reset silently failed for anyone entering an email: the lookup matched username or email but the update keyed only on UserName, so no row changed while the new password was still emailed. It now keys on the matched id, clears the failed-login counter and skips archived accounts. The reset form states it accepts either identifier, and the login link, which sat at 1.49:1 contrast on a white card, now uses the theme indigo at 6.29:1.\n\nadmincp/users.php offers selectable page sizes instead of a hardcoded 50, and its two dropdowns share one aligned row. Wide listings scroll sideways instead of squeezing their columns, and row action buttons no longer wrap.\n\nNewsletter jobs record the timezone they were scheduled in, so start, ETA and completion display in that zone rather than the server clock.\n\nThe pricing popup no longer advertises services that have since been disabled, archived or hidden. The Apply API shortcut now moves pending orders to the new supplier like the tab save does, and supplier names are HTML-decoded so ampersands and emoji render.\n\nIncludes an additive migration for the newsletter timezone column.",
   "released_at": "2026-07-18",
   "min_php": "8.1"
 }
