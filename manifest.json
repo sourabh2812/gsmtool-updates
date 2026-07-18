@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.13",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.13/gsmtool-2.0.13.zip",
-  "release_notes": "Newsletter formatting freedom + CKEditor upgrade to 4.22.1\n\nTwo improvements to newsletter and content editing:\n\n- Newsletter bodies are now sent exactly as authored. The send paths no longer inject inline styles or a centered wrapper into the content \u2014 lists render normally (bullets with their text) and whatever formatting the admin composes in the newsletter editor takes effect as-is.\n- The admin rich-text editor (used across all editor pages: newsletters, news, pages, service descriptions, email templates, products, FAQs and more) is upgraded from CKEditor 4.12.1 to 4.22.1, the last open-source 4.x release, picking up the published 4.x XSS security fixes. The emojione plugin and editor configuration carry over; the obsolete flash and wsc plugins were removed upstream by CKEditor and are unused by the app.",
-  "released_at": "2026-07-17",
+  "latest_version": "2.0.14",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.14/gsmtool-2.0.14.zip",
+  "release_notes": "Fix newsletter emoji corruption, invoice-cancel blank screen, service detail page styling\n\nNewsletter scheduler: job tables were latin1 so the Body snapshot turned emoji into '?' on scheduled sends (test sends unaffected); migration converts tbl_gf_newsletter_jobs + tbl_gf_newsletter_job_recipients to utf8mb4. Cancel Invoice: rebateUserCredits() fataled on PHP 8 (TypeError on empty-string arithmetic) when the invoice had CreditsTransferred=0, blanking the page after the status update; guards added, covers bulk cancel and single-invoice status change. Service detail pages: rebuilt servicedtl/serverservicedtl as a white card matching the services listing with readable typography for admin-entered descriptions, delivery/price chips, themed order button, responsive.",
+  "released_at": "2026-07-18",
   "min_php": "8.1"
 }
