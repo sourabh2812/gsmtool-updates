@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.14",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.14/gsmtool-2.0.14.zip",
-  "release_notes": "Fix newsletter emoji corruption, invoice-cancel blank screen, service detail page styling\n\nNewsletter scheduler: job tables were latin1 so the Body snapshot turned emoji into '?' on scheduled sends (test sends unaffected); migration converts tbl_gf_newsletter_jobs + tbl_gf_newsletter_job_recipients to utf8mb4. Cancel Invoice: rebateUserCredits() fataled on PHP 8 (TypeError on empty-string arithmetic) when the invoice had CreditsTransferred=0, blanking the page after the status update; guards added, covers bulk cancel and single-invoice status change. Service detail pages: rebuilt servicedtl/serverservicedtl as a white card matching the services listing with readable typography for admin-entered descriptions, delivery/price chips, themed order button, responsive.",
+  "latest_version": "2.0.15",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.15/gsmtool-2.0.15.zip",
+  "release_notes": "Preserve custom branding and uploads across updates\n\nUpdates no longer overwrite your uploaded logo, favicons, banners, or theme colors. The update package no longer contains the default branding assets, and the updater keeps any existing uploaded content in place.",
   "released_at": "2026-07-18",
   "min_php": "8.1"
 }
