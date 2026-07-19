@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.18",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.18/gsmtool-2.0.18.zip",
-  "release_notes": "Responsive order history, mobile card view, and header/statement polish\n\nIMEI order history: desktop uses proportional percentage columns that scale with the container instead of the service column starving; below 992px it becomes a card per order (service name, status, and a + opening the order-details popup) like the dashboard list. Dropped the unnecessary bold on the order-history service and statement IMEI columns. The mobile user pill now shows the customer's name and balance next to the avatar rather than collapsing to the avatar alone, restoring their display over blue.css's .nav-user span hide.",
+  "latest_version": "2.0.19",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.19/gsmtool-2.0.19.zip",
+  "release_notes": "Fix Activate-button email, migrated-user profile, and In Process status\n\nRegistration/shop emails now supply a plain activation URL so the template button renders; migrated users with CountryId=0 keep a full profile overview; orders already sent to a supplier API show as In Process.",
   "released_at": "2026-07-19",
   "min_php": "8.1"
 }
