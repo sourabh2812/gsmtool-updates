@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.19",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.19/gsmtool-2.0.19.zip",
-  "release_notes": "Fix Activate-button email, migrated-user profile, and In Process status\n\nRegistration/shop emails now supply a plain activation URL so the template button renders; migrated users with CountryId=0 keep a full profile overview; orders already sent to a supplier API show as In Process.",
-  "released_at": "2026-07-19",
+  "latest_version": "2.0.20",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.20/gsmtool-2.0.20.zip",
+  "release_notes": "Show categories with only-disabled services in admin dropdowns\n\nService Category dropdowns (services/serverservices/quickpricing) now list any enabled non-archived category with at least one non-archived service, so categories whose services are all disabled remain reachable to re-enable.",
+  "released_at": "2026-07-20",
   "min_php": "8.1"
 }
