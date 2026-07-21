@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.20",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.20/gsmtool-2.0.20.zip",
-  "release_notes": "Show categories with only-disabled services in admin dropdowns\n\nService Category dropdowns (services/serverservices/quickpricing) now list any enabled non-archived category with at least one non-archived service, so categories whose services are all disabled remain reachable to re-enable.",
-  "released_at": "2026-07-20",
+  "latest_version": "2.0.21",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.21/gsmtool-2.0.21.zip",
+  "release_notes": "Flash Popup, mobile bulk-reply, DHRU serial input, and admin fixes\n\nNew: Flash Popup \u2014 a before/after-login announcement popup (replaces the old Login News Popup), with a standard on/off switch.\n\nFixes:\n- Mobile-responsive bulk reply orders \u2014 the IMEI order table becomes touch-friendly cards on phones; wider Service column on desktop.\n- DHRU services now sync and show the correct primary Serial/SN input instead of an IMEI box.\n- Dhru-migrate builds phone numbers as E.164 so migrated numbers keep their country code (fixes failed SMS).\n- Bulk admin service grids no longer drop toggles (max_input_vars raised to 20000).\n- Disabled categories stay visible in admin (shown as Disabled) so they can be re-enabled.\n- Price-change popup no longer counts hidden or disabled services.\n- Long or emoji service names no longer abort price-change notices (PackTitle widened to utf8mb4).\n\nIncludes migrations for the flash-popup table, the DHRU CustomInput column, and the PackTitle widening.",
+  "released_at": "2026-07-21",
   "min_php": "8.1"
 }
