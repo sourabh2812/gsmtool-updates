@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.24",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.24/gsmtool-2.0.24.zip",
-  "release_notes": "fix: Full Screen menu icon + restyle Refresh API Orders page\n\n- header.php: the Full Screen action used `fa fa-move`, which is not a real\n  FontAwesome glyph, so the icon rendered blank on desktop. Use `fa fa-expand`.\n- refreshapiorders.php: replace the bare title + green banner with a themed\n  portlet (green box, caption, success alert) and report how many processing\n  orders were actually re-armed per service type, plus an explanation and a\n  Back To Dashboard button.\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+  "latest_version": "2.0.25",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.25/gsmtool-2.0.25.zip",
+  "release_notes": "feat: Wise payment gateway + custom-field editing + 12h grace\n\nThis release bundles three changes:\n\n- Wise payment gateway (Type 10): QR/bank-transfer method with automatic reconciliation via the Wise balance-statement API (cron wise_reconcile.php, every ~15 min), 12h admin fallback email for unmatched deposits, per-user credit path mirroring the existing gateways, and an admin cron-setup hint on the payment-method page.\n- Custom fields fully editable in admin: blank min/max/exact length no longer blocks Save, the Field Label is unlocked on system fields, and the Field Type can be changed on edit (the underlying data column is altered to match).\n- Supplier-disconnect grace window reduced from 24h to 12h (GF_DISCONNECT_GRACE_HOURS); the catalog-sync email wording follows the constant automatically.",
   "released_at": "2026-07-24",
   "min_php": "8.1"
 }
