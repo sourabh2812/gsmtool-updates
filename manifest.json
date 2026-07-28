@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.27",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.27/gsmtool-2.0.27.zip",
-  "release_notes": "v2.0.27 \u2014 maintenance fixes (strict-SQL saves, PHP 8, dashboard)\n\nMaintenance fixes\n\n- Fixed: creating a new IMEI/File service could show \"saved successfully\" but not actually appear when the database runs in strict SQL mode \u2014 integer fields now default correctly so the service always saves.\n- Fresh installations now set MariaDB to the application's expected (non-strict) SQL mode, preventing this class of silent save failure on new servers.\n- Fixed a PHP 8 fatal on the login reCAPTCHA verification path (an unquoted key caused an \"Undefined constant\" error when a captcha check failed).\n- Fixed: re-queuing an order (clearing its supplier order id) now correctly resends it to the supplier on PHP 8.\n- Dashboard \"Recent Orders\" restyled to match the admin theme palette (consistent card, colours, and spacing).\n- Hardened the API-threshold utility against direct access so a stray request can't error.",
-  "released_at": "2026-07-27",
+  "latest_version": "2.0.28",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.28/gsmtool-2.0.28.zip",
+  "release_notes": "Manual rejection review, per-order API re-routing & mobile-friendly UI\n\nAdmin: manually verify supplier rejections before customers are refunded/notified (per-service toggle holds rejects for review; approve or re-route to another API), plus per-order Connect-to-API to repoint/requeue any order and a dashboard action indicator. Fixes: add-credits error names the actual payment method; PHP 8 hardening. Mobile/responsive polish across admin orders and the client dashboard (2-up tiles, centered donuts, compact prompts, redesigned nav & profile menu) \u2014 desktop unchanged.",
+  "released_at": "2026-07-28",
   "min_php": "8.1"
 }
