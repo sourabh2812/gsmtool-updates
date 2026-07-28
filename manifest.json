@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.28",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.28/gsmtool-2.0.28.zip",
-  "release_notes": "Manual rejection review, per-order API re-routing & mobile-friendly UI\n\nAdmin: manually verify supplier rejections before customers are refunded/notified (per-service toggle holds rejects for review; approve or re-route to another API), plus per-order Connect-to-API to repoint/requeue any order and a dashboard action indicator. Fixes: add-credits error names the actual payment method; PHP 8 hardening. Mobile/responsive polish across admin orders and the client dashboard (2-up tiles, centered donuts, compact prompts, redesigned nav & profile menu) \u2014 desktop unchanged.",
+  "latest_version": "2.0.29",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.29/gsmtool-2.0.29.zip",
+  "release_notes": "Show your eBay seller feedback on the homepage\n\nManage Testimonial now lets you show your eBay seller feedback on the homepage instead of (or alongside a toggle with) your client testimonials. Enter your eBay seller user id and choose the source; your public eBay feedback \u2014 positive, neutral and negative \u2014 is fetched, cached for 7 days, and shown in a slowly auto-rolling carousel with the eBay logo linking to your profile.",
   "released_at": "2026-07-28",
   "min_php": "8.1"
 }
