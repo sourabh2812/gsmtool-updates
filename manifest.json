@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.30",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.30/gsmtool-2.0.30.zip",
-  "release_notes": "Database Migrator \u2014 import an existing Dhru Fusion or GSM Tool database\n\nAdds Miscellaneous \u2192 Database Migrator: a self-serve admin tool to import your\nexisting site's data (users with passwords & credits, catalog, orders,\ninvoices, tickets) from a Dhru Fusion or older GSM Tool database dump.\n\n- Pick the source (GSM Tool or Dhru Fusion) and upload a .sql dump\n- Merge or Replace modes, with a dry-run to preview counts before writing\n- Live progress log; IDs are remapped and credits re-encrypted on import",
+  "latest_version": "2.0.31",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.31/gsmtool-2.0.31.zip",
+  "release_notes": "Auto Catalog reliability, masked API keys, per-API disconnect grace\n\n- Auto Catalog: newly discovered supplier services now go straight to the\n  supplier API (Recalculate). Publishing a discovered service is hardened so a\n  database schema difference can no longer stop the whole catalog sync.\n- New custom fields found during discovery are staged and promoted on publish.\n- Terms & Conditions toggle is kept when editing a discovered draft.\n- Supplier \"Disconnect Grace (hours)\" is now configurable per API.\n- Admin API screen shows the saved API key masked instead of blank \u2014 leave it\n  blank to keep the existing key.\n- Cleaner sidebar \"New\" badge.",
   "released_at": "2026-07-29",
   "min_php": "8.1"
 }
