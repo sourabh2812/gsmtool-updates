@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.29",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.29/gsmtool-2.0.29.zip",
-  "release_notes": "Show your eBay seller feedback on the homepage\n\nManage Testimonial now lets you show your eBay seller feedback on the homepage instead of (or alongside a toggle with) your client testimonials. Enter your eBay seller user id and choose the source; your public eBay feedback \u2014 positive, neutral and negative \u2014 is fetched, cached for 7 days, and shown in a slowly auto-rolling carousel with the eBay logo linking to your profile.",
-  "released_at": "2026-07-28",
+  "latest_version": "2.0.30",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.30/gsmtool-2.0.30.zip",
+  "release_notes": "Database Migrator \u2014 import an existing Dhru Fusion or GSM Tool database\n\nAdds Miscellaneous \u2192 Database Migrator: a self-serve admin tool to import your\nexisting site's data (users with passwords & credits, catalog, orders,\ninvoices, tickets) from a Dhru Fusion or older GSM Tool database dump.\n\n- Pick the source (GSM Tool or Dhru Fusion) and upload a .sql dump\n- Merge or Replace modes, with a dry-run to preview counts before writing\n- Live progress log; IDs are remapped and credits re-encrypted on import",
+  "released_at": "2026-07-29",
   "min_php": "8.1"
 }
