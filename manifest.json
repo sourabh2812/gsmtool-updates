@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.34",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.34/gsmtool-2.0.34.zip",
-  "release_notes": "Merge pull request #107 from sourabh2812/bugfix\n\nSMS gating redesign, broken activation/PayPal links fix, dead Retail-checkout removal",
-  "released_at": "2026-08-01",
+  "latest_version": "2.0.35",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.35/gsmtool-2.0.35.zip",
+  "release_notes": "Login, catalog, and API settings fixes\n\n- You can now log in with either your username or your email address\n- Fixed an issue where some server/API service categories weren't matching up automatically\n- Fixed an issue on the API settings page that could reset connected service data on save",
+  "released_at": "2026-08-07",
   "min_php": "8.1"
 }
