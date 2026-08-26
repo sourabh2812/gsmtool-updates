@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.39",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.39/gsmtool-2.0.39.zip",
-  "release_notes": "This release fixes an issue where a successful payment sometimes did not add credits to the customer's account, most often on someone's very first payment.\n\nWhat changed:\n- Payments made through any supported method (PayPal, Stripe, Wise, Binance, PayerURL, or invoice payments) now reliably add credits to the customer's account right after a successful payment.\n- If an admin needed to manually approve a stuck payment, the approval now correctly adds the customer's credits at the same time, instead of only updating the payment's status.\n\nCustomers affected by this in the past can be resolved by re-approving the payment from the admin panel; credits will be added automatically and safely, with no risk of adding them twice.",
+  "latest_version": "2.0.40",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.40/gsmtool-2.0.40.zip",
+  "release_notes": "Fix payment crediting: crash on first-time payments, and a broken manual approval\n\n- Every payment gateway (PayPal, Stripe, Wise, Binance, PayerURL, and\n  invoice-based payments) could fail with a fatal error when crediting\n  a customer's very first payment, because a brand-new account's credit\n  balance is stored as empty rather than zero. The payment would still\n  be captured by the gateway, but the credit-adding step would crash\n  partway through, leaving the invoice stuck instead of completed.\n- The admin \"Mark invoices as Paid\" bulk action only changed an\n  invoice's status label \u2014 it never actually added the credits to the\n  customer's account, so using it on a stuck invoice left the customer\n  paid but still showing a $0 balance for that payment. It now adds\n  the credits correctly, the same way the single-invoice approval\n  screen does, and can't double-credit an invoice that's already been\n  processed.",
   "released_at": "2026-08-26",
   "min_php": "8.1"
 }
