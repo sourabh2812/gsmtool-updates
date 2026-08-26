@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.39",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.39/gsmtool-2.0.39.zip",
-  "release_notes": "chore: trigger release for #111\n\nPR #112 was docs-only and correctly opted out of a release. That commit\nbecoming HEAD then blocked the previous merge (#111, a real bugfix)\nfrom ever publishing, since the release-skip check only inspects the\nsingle latest commit. This carries no file changes; it exists purely\nso the next Publish Update run has a HEAD commit that is not opted out.",
+  "latest_version": "2.0.40",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.40/gsmtool-2.0.40.zip",
+  "release_notes": "chore: unblock release-notes fix for v2.0.38 (no file changes)",
   "released_at": "2026-08-26",
   "min_php": "8.1"
 }
