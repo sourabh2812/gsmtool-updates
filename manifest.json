@@ -1,7 +1,7 @@
 {
   "latest_version": "2.0.38",
   "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.38/gsmtool-2.0.38.zip",
-  "release_notes": "chore: trigger release for #111\n\nPR #112 was docs-only and correctly opted out of a release. That commit\nbecoming HEAD then blocked the previous merge (#111, a real bugfix)\nfrom ever publishing, since the release-skip check only inspects the\nsingle latest commit. This carries no file changes; it exists purely\nso the next Publish Update run has a HEAD commit that is not opted out.",
+  "release_notes": "This release fixes a few issues:\n\n- Links in order and invoice notification emails (\"click here to update his credits\") sometimes pointed to a broken web address and wouldn't open correctly. These links now always work.\n- Removing a customer's last restricted payment method from their profile could show a blank error page instead of saving. This is fixed.\n- Prices for very low-cost services could round down to the wrong amount in some cases. Fixed.\n- A rare issue where an already-disconnected supplier service kept reconnecting and disconnecting repeatedly, sending unnecessary alerts. Fixed.",
   "released_at": "2026-08-26",
   "min_php": "8.1"
 }
