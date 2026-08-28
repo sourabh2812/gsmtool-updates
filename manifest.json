@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.40",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.40/gsmtool-2.0.40.zip",
-  "release_notes": "Fix payment crediting: crash on first-time payments, and a broken manual approval\n\n- Every payment gateway (PayPal, Stripe, Wise, Binance, PayerURL, and\n  invoice-based payments) could fail with a fatal error when crediting\n  a customer's very first payment, because a brand-new account's credit\n  balance is stored as empty rather than zero. The payment would still\n  be captured by the gateway, but the credit-adding step would crash\n  partway through, leaving the invoice stuck instead of completed.\n- The admin \"Mark invoices as Paid\" bulk action only changed an\n  invoice's status label \u2014 it never actually added the credits to the\n  customer's account, so using it on a stuck invoice left the customer\n  paid but still showing a $0 balance for that payment. It now adds\n  the credits correctly, the same way the single-invoice approval\n  screen does, and can't double-credit an invoice that's already been\n  processed.",
-  "released_at": "2026-08-26",
+  "latest_version": "2.0.41",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.41/gsmtool-2.0.41.zip",
+  "release_notes": "Fix dashboard logo selection, category image uploads, and a pricing-sync cron error\n\n- Fixed: the customer dashboard could occasionally show the wrong logo instead of the one set for the Customer Panel.\n- Fixed: category icon uploads could silently fail to save on installs updated via Update Now.\n- Fixed: the admin Online Customers list had a broken link and an empty email column.\n- Fixed: client theme style updates now take effect immediately instead of requiring users to clear their browser cache.\n- Fixed: the supplier catalog price-sync cron job could fail with a database error on some installs.\n- Fixed: a few database migrations could fail if they ran more than once.",
+  "released_at": "2026-08-28",
   "min_php": "8.1"
 }
