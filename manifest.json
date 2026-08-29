@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.41",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.41/gsmtool-2.0.41.zip",
-  "release_notes": "Fix dashboard logo selection, category image uploads, and a pricing-sync cron error\n\n- Fixed: the customer dashboard could occasionally show the wrong logo instead of the one set for the Customer Panel.\n- Fixed: category icon uploads could silently fail to save on installs updated via Update Now.\n- Fixed: the admin Online Customers list had a broken link and an empty email column.\n- Fixed: client theme style updates now take effect immediately instead of requiring users to clear their browser cache.\n- Fixed: the supplier catalog price-sync cron job could fail with a database error on some installs.\n- Fixed: a few database migrations could fail if they ran more than once.",
-  "released_at": "2026-08-28",
+  "latest_version": "2.0.42",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.42/gsmtool-2.0.42.zip",
+  "release_notes": "Fix admin logo vertical-centering math in the header\n\nFixed: the admin panel logo could appear pinned to the top of the header with extra empty space below it, instead of being vertically centered.",
+  "released_at": "2026-08-29",
   "min_php": "8.1"
 }
