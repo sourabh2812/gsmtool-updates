@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.44",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.44/gsmtool-2.0.44.zip",
-  "release_notes": "Logo fixes and more accurate service status in the admin panel\n\n- Fixed the logo in the admin panel header sitting off-center in some layouts.\n- Fixed the customer dashboard sometimes showing an old placeholder logo instead of your actual logo after an update.\n- Fixed the API History section on a service's edit page sometimes showing \"Active\" for a service the system had already correctly turned off, or showing nothing at all after running a catalog sync \u2014 it now always reflects the real, current status.\n- Reduced unnecessary \"renamed by supplier\" email alerts for services you never added to your catalog.",
-  "released_at": "2026-09-01",
+  "latest_version": "2.0.45",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.45/gsmtool-2.0.45.zip",
+  "release_notes": "Custom field and API History reliability fixes\n\n- Fixed an issue where sites with a lot of custom fields on their order forms could eventually be blocked from adding any new ones.\n- Fixed the API History section on a service's page permanently losing a service's name once your supplier stopped offering it \u2014 it now keeps showing the real name even after a later catalog sync, instead of a generic placeholder.",
+  "released_at": "2026-09-02",
   "min_php": "8.1"
 }
