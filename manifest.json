@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.46",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.46/gsmtool-2.0.46.zip",
-  "release_notes": "Restrict payment methods to one country and require fixed purchase amounts\n\n- Admins can now limit any payment method (like PayPal) to customers billing from one specific country you choose \u2014 not just the US as before.\n- Admins can require a payment method to only accept purchases in fixed dollar steps, e.g. only $50, $100, $150, and so on.\n- Error messages on the Add Credits page are now clearly shown in red and no longer keep reappearing every time you refresh the page.\n- Fixed a bug where a valid US address could get wrongly rejected if a customer typed their state's full name (e.g. \"New York\") instead of the abbreviation (\"NY\").",
-  "released_at": "2026-09-07",
+  "latest_version": "2.0.47",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.47/gsmtool-2.0.47.zip",
+  "release_notes": "Improved PayPal checkout receipts and product details\n\nPayPal purchases now show a clear product image, price, and quantity on your receipt instead of one lump amount, and a recognizable phone number on your card/bank statement so the charge is easy to identify.",
+  "released_at": "2026-09-11",
   "min_php": "8.1"
 }
