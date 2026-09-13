@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.47",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.47/gsmtool-2.0.47.zip",
-  "release_notes": "Improved PayPal checkout receipts and product details\n\nPayPal purchases now show a clear product image, price, and quantity on your receipt instead of one lump amount, and a recognizable phone number on your card/bank statement so the charge is easy to identify.",
-  "released_at": "2026-09-11",
+  "latest_version": "2.0.48",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.48/gsmtool-2.0.48.zip",
+  "release_notes": "Improved Stripe checkout receipts and product details\n\n- Stripe purchases now show a clear product image, price, and quantity\n  on your receipt, plus a recognizable name on your card/bank statement\n  \u2014 matching the PayPal experience.\n- Admins can turn on an itemized Stripe invoice (emailed automatically)\n  per payment method, for customers who want a formal PDF invoice.\n- Purchases are now correctly categorized as a physical product rather\n  than a digital service, for smoother card processing.\n- Product wording on PayPal and Stripe now consistently describes the\n  physical prepaid card being shipped.",
+  "released_at": "2026-09-13",
   "min_php": "8.1"
 }
