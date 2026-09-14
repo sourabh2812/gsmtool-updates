@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.50",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.50/gsmtool-2.0.50.zip",
-  "release_notes": "Improved order search and order detail layout\n\n- Admin order search and the order list now find and show the correct\n  IMEI/Serial for services that collect it through a custom field\n  instead of the standard IMEI box \u2014 previously these orders wouldn't\n  turn up in a search at all.\n- The order detail popup now shows the submitted order info on the\n  left and the supplier's response on the right, making it easier to\n  read at a glance.",
+  "latest_version": "2.0.51",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.51/gsmtool-2.0.51.zip",
+  "release_notes": "Fixed missing order info on Server Orders, matching IMEI orders\n\n- Server order search and lists now find and show data collected\n  through a custom field, instead of only checking the standard\n  Serial # box \u2014 the same fix already shipped for IMEI orders.\n- Fixed a bug where the very first submitted field on a server order\n  could be silently left off the order list.\n- The server order detail popup now matches the improved IMEI order\n  popup: submitted info on the left, the supplier's response on the\n  right, with one-click copy buttons.",
   "released_at": "2026-09-14",
   "min_php": "8.1"
 }
