@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.52",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.52/gsmtool-2.0.52.zip",
-  "release_notes": "Fixed a Wise payment-matching bug, added safety confirmations to admin quick actions\n\nFixed a rare bug where a customer's Wise payment could be credited to a different customer's older, unpaid invoice instead of their own, if both happened to request the same dollar amount. Payments now only auto-credit when the match is certain; anything uncertain is flagged for manual review instead of guessed.\n\nAlso added a confirmation step to the admin panel's \"Reset Password\" and \"Reset PIN\" quick actions, and made them visually distinct from routine actions like \"Login As Client\" \u2014 reducing the chance of an accidental click, since both email new credentials to the customer immediately.",
-  "released_at": "2026-09-14",
+  "latest_version": "2.0.53",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.53/gsmtool-2.0.53.zip",
+  "release_notes": "Clearer PayPal checkout fee breakdown for physical card orders\n\nPayPal checkout for physical prepaid-card purchases now shows the processing fee honestly: a \"Shipping\" charge (fixed, same for every order size) and a \"Handling\" charge (scales with the order), instead of lumping everything into a misleading \"Sales Tax\" line.\n\nThe order total shown before checkout now correctly includes this fee \u2014 previously it could undercount the total on larger purchases. The new fee only applies to PayPal, never Stripe or other payment methods.",
+  "released_at": "2026-09-19",
   "min_php": "8.1"
 }
