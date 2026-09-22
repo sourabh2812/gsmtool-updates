@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.53",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.53/gsmtool-2.0.53.zip",
-  "release_notes": "Clearer PayPal checkout fee breakdown for physical card orders\n\nPayPal checkout for physical prepaid-card purchases now shows the processing fee honestly: a \"Shipping\" charge (fixed, same for every order size) and a \"Handling\" charge (scales with the order), instead of lumping everything into a misleading \"Sales Tax\" line.\n\nThe order total shown before checkout now correctly includes this fee \u2014 previously it could undercount the total on larger purchases. The new fee only applies to PayPal, never Stripe or other payment methods.",
-  "released_at": "2026-09-19",
+  "latest_version": "2.0.54",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.54/gsmtool-2.0.54.zip",
+  "release_notes": "Telegram alerts for catalog updates\n\nYou can now get a Telegram message whenever:\n- A new service goes live\n- A service goes offline\n- A service's price changes (up or down)\n\nSet it up under admincp Settings > Telegram: use your existing bot (or create one), add it to a Telegram channel or group as admin, then configure the new \"Telegram Catalog Feed\" section with that channel and which of the three alerts you want. Off until you turn it on.",
+  "released_at": "2026-09-22",
   "min_php": "8.1"
 }
