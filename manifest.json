@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.54",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.54/gsmtool-2.0.54.zip",
-  "release_notes": "Telegram alerts for catalog updates\n\nYou can now get a Telegram message whenever:\n- A new service goes live\n- A service goes offline\n- A service's price changes (up or down)\n\nSet it up under admincp Settings > Telegram: use your existing bot (or create one), add it to a Telegram channel or group as admin, then configure the new \"Telegram Catalog Feed\" section with that channel and which of the three alerts you want. Off until you turn it on.",
+  "latest_version": "2.0.55",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.55/gsmtool-2.0.55.zip",
+  "release_notes": "Telegram catalog feed also covers automatic cost-based price updates\n\nThe Telegram catalog feed now also posts a price alert when a package's price auto-updates from a supplier cost change (the same trigger as the existing \"API Price Update!\" email), not just manual admin edits.",
   "released_at": "2026-09-22",
   "min_php": "8.1"
 }
