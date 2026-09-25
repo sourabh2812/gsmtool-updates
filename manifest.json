@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.59",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.59/gsmtool-2.0.59.zip",
-  "release_notes": "Searchable supplier-service dropdown, cleaner newsletters, emoji in service details\n\nThree small fixes:\n\n1. The Supplier Service dropdown (Connect API, on the codes verification page) is now searchable instead of a long unfiltered list.\n2. Newsletter emails no longer append the support/Telegram signature block at the bottom \u2014 cleaner for a marketing-style send.\n3. The \"Detail\" field on a service's edit page now correctly saves emoji and other special characters (previously got silently stripped to \"?\").",
+  "latest_version": "2.0.60",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.60/gsmtool-2.0.60.zip",
+  "release_notes": "Speed up dashboard, package edit, and catalog pages under load\n\nSargable date-range rewrites (was YEAR()/MONTH()/DATE()-wrapped WHERE\nclauses, which block any index) plus new indexes for the dashboard's\norder/profit/chart queries and the recent-orders feed, which used to\njoin and sort all three full order tables before limiting to 10.\nAlso fixes the checkbox-flash on service edit pages before sliders\ninit, narrows the catalog price-lookup queries, and adds a filter to\nthe Supplier Service picker.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
   "released_at": "2026-09-25",
   "min_php": "8.1"
 }
