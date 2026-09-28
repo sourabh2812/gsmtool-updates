@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.61",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.61/gsmtool-2.0.61.zip",
-  "release_notes": "Publish Now for discovered services, longer admin sessions, supplier description on discovery\n\nNew Services (Pending Review) gets a \"Publish Now\" action for any eligible\n(category-mapped) draft, plus a bulk \"Publish Now Selected\" alongside bulk\ndelete -- publishes immediately instead of waiting for the next eligible\ncron run. Eligibility now also catches a draft whose category was deleted\nafter it was staged, which previously still counted as mapped.\n\nAuto-discovered services now carry a supplier-provided description (when\nsent) straight into the draft's \"Detail:\" field instead of arriving blank.\n\nAdmin and customer login sessions now last 24 hours of inactivity instead\nof PHP's 24-minute default.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "latest_version": "2.0.62",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.62/gsmtool-2.0.62.zip",
+  "release_notes": "Fix logins getting signed out early\n\nYou could get signed out of admincp (or your storefront account) well\nbefore the 24-hour session limit, even while actively using it. Logins\nnow stay active for the full 24 hours as intended.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
   "released_at": "2026-09-28",
   "min_php": "8.1"
 }
