@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.62",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.62/gsmtool-2.0.62.zip",
-  "release_notes": "Fix logins getting signed out early\n\nYou could get signed out of admincp (or your storefront account) well\nbefore the 24-hour session limit, even while actively using it. Logins\nnow stay active for the full 24 hours as intended.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
-  "released_at": "2026-09-28",
+  "latest_version": "2.0.63",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.63/gsmtool-2.0.63.zip",
+  "release_notes": "Fix profit showing under the wrong month for late-reviewed orders\n\nFixed a bug where re-opening an order you had already completed (for\nexample, to clear a pending verification check) could make its profit\nshow up under the wrong month on the dashboard. Profit now always\ncounts toward the month the order was actually completed, no matter\nwhen you review it afterward.",
+  "released_at": "2026-10-02",
   "min_php": "8.1"
 }
