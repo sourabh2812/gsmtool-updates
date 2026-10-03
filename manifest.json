@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.63",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.63/gsmtool-2.0.63.zip",
-  "release_notes": "Fix profit showing under the wrong month for late-reviewed orders\n\nFixed a bug where re-opening an order you had already completed (for\nexample, to clear a pending verification check) could make its profit\nshow up under the wrong month on the dashboard. Profit now always\ncounts toward the month the order was actually completed, no matter\nwhen you review it afterward.",
-  "released_at": "2026-10-02",
+  "latest_version": "2.0.64",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.64/gsmtool-2.0.64.zip",
+  "release_notes": "Fix order list display issues on the Reply Orders page\n\nService, IMEI, and reply fields in the bulk order list weren't laying\nout cleanly: long service names could wrap awkwardly, the IMEI column\ntook up more space than it needed, and the reply text box on mobile\nappeared larger than the rest of the page.",
+  "released_at": "2026-10-03",
   "min_php": "8.1"
 }
