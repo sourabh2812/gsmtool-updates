@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.64",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.64/gsmtool-2.0.64.zip",
-  "release_notes": "Fix order list display issues on the Reply Orders page\n\nService, IMEI, and reply fields in the bulk order list weren't laying\nout cleanly: long service names could wrap awkwardly, the IMEI column\ntook up more space than it needed, and the reply text box on mobile\nappeared larger than the rest of the page.",
-  "released_at": "2026-10-03",
+  "latest_version": "2.0.65",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.65/gsmtool-2.0.65.zip",
+  "release_notes": "Fix duplicate serial number field on some IMEI unlock services\n\nA handful of services were showing two serial number boxes on the\norder form instead of one, left over from when those services were\npreviously connected to a different supplier. The leftover field is\nnow cleaned up automatically the next time services are synced from\nthe supplier.",
+  "released_at": "2026-10-06",
   "min_php": "8.1"
 }
