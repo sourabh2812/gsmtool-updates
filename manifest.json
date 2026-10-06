@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.65",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.65/gsmtool-2.0.65.zip",
-  "release_notes": "Fix duplicate serial number field on some IMEI unlock services\n\nA handful of services were showing two serial number boxes on the\norder form instead of one, left over from when those services were\npreviously connected to a different supplier. The leftover field is\nnow cleaned up automatically the next time services are synced from\nthe supplier.",
+  "latest_version": "2.0.66",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.66/gsmtool-2.0.66.zip",
+  "release_notes": "Speed up the dashboard, order page, and catalog browsing\n\nPages were loading slower than they should, especially the order\npage and catalog. A few lookups were scanning far more data than\nneeded, a logged-out visitor's browser was downloading the full\norder catalog before being sent to the login page, catalog images\nwere all loading at once instead of as you scroll, and a memory\nsetting was wider than it needed to be. All fixed.",
   "released_at": "2026-10-06",
   "min_php": "8.1"
 }
