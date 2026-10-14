@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.66",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.66/gsmtool-2.0.66.zip",
-  "release_notes": "Speed up the dashboard, order page, and catalog browsing\n\nPages were loading slower than they should, especially the order\npage and catalog. A few lookups were scanning far more data than\nneeded, a logged-out visitor's browser was downloading the full\norder catalog before being sent to the login page, catalog images\nwere all loading at once instead of as you scroll, and a memory\nsetting was wider than it needed to be. All fixed.",
-  "released_at": "2026-10-06",
+  "latest_version": "2.0.67",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.67/gsmtool-2.0.67.zip",
+  "release_notes": "Add automatic Zelle payment gateway with instant credit\n\nCustomers can now pay with Zelle and have credits added automatically,\ninstead of waiting for manual approval. A new \"ZellePay (Auto)\" payment\nmethod reads your Zelle notification emails, matches each payment to\nthe right customer by their username or invoice number in the memo,\nand credits the account within minutes - no admin action needed.\n\nOn the payment page, customers just enter an amount and submit; the\nQR code and payment instructions now show on the invoice screen right\nafter, with a clear example of what to write in the memo. If a payment\ncan't be matched automatically within 12 hours, you get an email so it\ncan still be approved by hand.\n\nTo turn this on, add the gateway under Payment Methods, enter your\nZelle inbox's Gmail app password and your bank's notification email\ndetails, then set up the cron job shown on that page.",
+  "released_at": "2026-10-14",
   "min_php": "8.1"
 }
