@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.69",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.69/gsmtool-2.0.69.zip",
-  "release_notes": "Detect and heal partial schema imports, not just \"> 10 tables\"\n\nThe idempotency check for schema import used a fixed \">10 tables\" threshold.\nA prior run that fails partway through the SQL import (as happened after the\ntbl_gf_email_settings fix) leaves a partial schema that still clears that bar,\nso every later re-run of install.sh reports \"already imported\" and never\nretries \u2014 the install looks successful with most of the app's tables missing.\n\nNow compares against the actual CREATE TABLE count in the bundled template,\nand drops + recreates the database before re-importing if the count is short.",
+  "latest_version": "2.0.70",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.70/gsmtool-2.0.70.zip",
+  "release_notes": "Fix tbl_gf_payment_methods column mismatch; scrub committed live keys\n\nSame pattern as the earlier tbl_gf_email_settings fix: five columns were\nadded to this table by later migrations (StripeInvoiceCreation, ShippingFee,\nIsSandbox, RestrictCountryISO, AmountDenomination) without updating this\nseed row, so a fresh install failed on this INSERT too (\"Column count\ndoesn't match value count\").\n\nAlso removes live-looking Stripe keys (sk_live_/pk_live_) and PayPal\ncredential hashes that were hardcoded in this demo row and shipped in\nevery installer package. Credential fields are NULL on fresh installs \u2014\ncustomers configure their own gateways in admincp after login.\n\nSECURITY: if the Stripe key was ever live, rotate it in the Stripe\ndashboard \u2014 this only removes it from future installs/commits, not from\ngit history or packages already sent to customers.",
   "released_at": "2026-10-17",
   "min_php": "8.1"
 }
