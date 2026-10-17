@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.68",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.68/gsmtool-2.0.68.zip",
-  "release_notes": "Fix fresh-install breakage: template.sql column mismatch, ini comment syntax\n\ntbl_gf_email_settings seed INSERT was short 6 values (102 vs 108 columns)\nafter four migrations added columns without updating this row \u2014 every\nfresh install failed at schema import with \"Column count doesn't match\nvalue count\". Backfilled the missing values from each migration's own\nDEFAULT.\n\ninstall.sh's 99-gsmtool.ini heredoc used '#' comments; PHP's ini parser\nchoked on the parenthesis in one of them (\"syntax error, unexpected '('\"),\nbreaking CLI PHP on every install. Switched to ';' comments.\n\nAlso: stopped swallowing the schema-import error with 2>/dev/null (it was\nhiding the real cause above), and fixed the ERR trap to report the actual\nfailing line via BASH_LINENO instead of the trap handler's own line.",
+  "latest_version": "2.0.69",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.69/gsmtool-2.0.69.zip",
+  "release_notes": "Detect and heal partial schema imports, not just \"> 10 tables\"\n\nThe idempotency check for schema import used a fixed \">10 tables\" threshold.\nA prior run that fails partway through the SQL import (as happened after the\ntbl_gf_email_settings fix) leaves a partial schema that still clears that bar,\nso every later re-run of install.sh reports \"already imported\" and never\nretries \u2014 the install looks successful with most of the app's tables missing.\n\nNow compares against the actual CREATE TABLE count in the bundled template,\nand drops + recreates the database before re-importing if the count is short.",
   "released_at": "2026-10-17",
   "min_php": "8.1"
 }
