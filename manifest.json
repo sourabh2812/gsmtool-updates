@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.70",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.70/gsmtool-2.0.70.zip",
-  "release_notes": "Fix tbl_gf_payment_methods column mismatch; scrub committed live keys\n\nSame pattern as the earlier tbl_gf_email_settings fix: five columns were\nadded to this table by later migrations (StripeInvoiceCreation, ShippingFee,\nIsSandbox, RestrictCountryISO, AmountDenomination) without updating this\nseed row, so a fresh install failed on this INSERT too (\"Column count\ndoesn't match value count\").\n\nAlso removes live-looking Stripe keys (sk_live_/pk_live_) and PayPal\ncredential hashes that were hardcoded in this demo row and shipped in\nevery installer package. Credential fields are NULL on fresh installs \u2014\ncustomers configure their own gateways in admincp after login.\n\nSECURITY: if the Stripe key was ever live, rotate it in the Stripe\ndashboard \u2014 this only removes it from future installs/commits, not from\ngit history or packages already sent to customers.",
+  "latest_version": "2.0.71",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.71/gsmtool-2.0.71.zip",
+  "release_notes": "Fix DB password drift on install.sh re-run\n\nSecrets (DB_PASS, DB_ROOT_PASS, GAUTH_ENC_KEY, GSMTOOL_KEY_SALT) were\nregenerated with fresh random values on every run, including re-runs of an\nalready-installed site. CREATE USER IF NOT EXISTS silently no-ops when the\nMariaDB user already exists, so the DB user's real password stayed from the\nfirst run while the VirtualHost got a new DB_PASS each re-run \u2014 the app then\ncan't connect (\"DB Connection Failed!\") despite the installer reporting\nsuccess, since its own verification step only checks the public DNS-resolved\nsite, not the local vhost (so it can't see this failure either when DNS\nisn't pointed at the server yet).\n\nNow: reuse existing secrets from the current VirtualHost if present, and\nalways sync the actual MariaDB password via ALTER USER so any already-drifted\ninstall self-heals on next run too.",
   "released_at": "2026-10-17",
   "min_php": "8.1"
 }
