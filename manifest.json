@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.73",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.73/gsmtool-2.0.73.zip",
-  "release_notes": "Fix post-hoc SSL instructions: certbot was never installed when SSL skipped\n\nHit this live on the bestpriceunlock.com install: DNS wasn't ready at\ninstall time, so install.sh correctly skipped the whole SSL step \u2014 but\nevery \"run this once DNS is ready\" hint (in-script warnings and the\ncredentials file) just said to run certbot directly, which was never\ninstalled. Added the apt-get install line everywhere that hint appears.\n\nAlso added ServerAlias www.$DOMAIN to the generated VirtualHost \u2014 without\nit, requesting a cert for the www subdomain later fails with \"vhost\nambiguity\" since certbot can't tell which vhost it belongs to.",
+  "latest_version": "2.0.74",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.74/gsmtool-2.0.74.zip",
+  "release_notes": "Canonicalize www to the bare domain \u2014 license is host-exact, www broke it\n\nHit this live: after adding ServerAlias www.$DOMAIN (for certbot's benefit),\nApache happily served the app on www.bestpriceunlock.com too, but\nlicense_helper.php does an exact HTTP_HOST match against the single domain\non the license \u2014 so every www visitor got \"This license is for domain\n'bestpriceunlock.com', not 'www.bestpriceunlock.com'\".\n\nAdded a redirect-to-bare-domain rule ahead of everything else in the\ngenerated vhost. certbot's apache plugin copies the vhost's directives\n(this rule included) into the :443 config when it later issues the cert, so\none fix in the :80 template covers both.",
   "released_at": "2026-10-18",
   "min_php": "8.1"
 }
