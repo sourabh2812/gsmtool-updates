@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.72",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.72/gsmtool-2.0.72.zip",
-  "release_notes": "Fix stale docs: step count, PHP 7.4 leftovers, missing unzip, DNS check caveat\n\nvps-installation.md said \"9 setup steps\" / \"Step 4/9\" \u2014 install.sh has run\n11 steps since the fail2ban and cron-logging steps were added. Also fixed\nthe PHP config path example (still said /etc/php/7.4, app has used 8.3 for\na while).\n\nvps-installation-manual.md's PHP-8.3 install block was followed by bolt.so\nand short_open_tag commands still targeting /etc/php/7.4 \u2014 copy-pasting the\nmanual steps as written would configure the wrong PHP version entirely.\n\nAdded two gaps found while installing for a real customer today: a fresh\nUbuntu 24.04 image doesn't always have `unzip` preinstalled, and the\ninstaller's own \"Site is responding\" check follows public DNS \u2014 it can\nreport success while actually hitting a parking page if DNS isn't pointed\nat the server yet, masking a real failure underneath. Documented a\n--resolve-based check that verifies the app directly instead.",
-  "released_at": "2026-10-17",
+  "latest_version": "2.0.73",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.73/gsmtool-2.0.73.zip",
+  "release_notes": "Fix post-hoc SSL instructions: certbot was never installed when SSL skipped\n\nHit this live on the bestpriceunlock.com install: DNS wasn't ready at\ninstall time, so install.sh correctly skipped the whole SSL step \u2014 but\nevery \"run this once DNS is ready\" hint (in-script warnings and the\ncredentials file) just said to run certbot directly, which was never\ninstalled. Added the apt-get install line everywhere that hint appears.\n\nAlso added ServerAlias www.$DOMAIN to the generated VirtualHost \u2014 without\nit, requesting a cert for the www subdomain later fails with \"vhost\nambiguity\" since certbot can't tell which vhost it belongs to.",
+  "released_at": "2026-10-18",
   "min_php": "8.1"
 }
