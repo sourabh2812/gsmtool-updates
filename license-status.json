@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-17T05:45:52Z",
-  "sig": "KVCRQFTVjHiEV7C0K6jwBVmACK5Bn6TRwlhEUfqcSPVZeD8vLSt6DwBu4qfAa/+cOiZy4aqruFWC4E6rFh6KRouhlMU3Yr2Z39Pbpy7K6YgjWpS7iiaoEPNs4cSfAQ6GSN2VOK9xBL0mV5YVcr5DTzjE7Rgbskiz6DAo6k+JhoVm1C6HtuJTQudoLFEi9O+WZsKPD3EWtBqFafgOeLV1S6WeD0h0LNeqDBECwp+g8FvlvCgfERd9KAYNUFdDwuWbbN92TbrSQor4odkD9kl3r0p62TCAy25X4w0u8tdcqTqVpTjRkVa/4eigvtDG8JVcQm2/EcPnv/JhYursimqq/A==",
+  "generated_at": "2026-10-18T06:23:31Z",
+  "sig": "FIVaRNtMVVN8IwPrLlm3DsKGVCD8gutuNEl3aUzJJUdBUnKWcnDgsz7Vpsy6K4RBFX52DdJHY4itwbnys3iH3mPXwE3s2GF5EsMjnouO+Q6roIgdi2VzYI86RxUsL4834uiuzzFvwpXFpwEw1HtwTKKWy8Ds93C7vNkZujLegF6qVmgqkaOd6Dw9+iM1LYUHEOxgmDmvoV9wz/AoqpDOsVmyJ2/kwS9KlqSl2NDR8VAkf5t7D0aManIGao2UZ5aq9GVQEgZJr27fcsM0v/vLt3P9o39dJgzPlAjn1UG4ggbmyPcyelUSOn9obCumsHlkD2GmNkyX/NwnKkCSW28c+g==",
   "statuses": {
     "bestpriceunlock.com": {
       "status": "active",
-      "support_end": "2027-10-17"
+      "support_end": "2027-10-18"
     },
     "demo.gsmfusiontool.com": {
       "status": "active",
