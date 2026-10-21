@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.75",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.75/gsmtool-2.0.75.zip",
-  "release_notes": "Pin all workflow runners to ubuntu-24.04\n\nGitHub's ubuntu-latest label migrates to Ubuntu 26 starting Oct 19, 2026 \u2014\ntomorrow. issue-license.yml's build job installs PHP 8.4 via the Ondrej PPA\nand compiles/copies bolt.so against whatever runner image it gets; an\nunannounced OS jump mid-migration-window is exactly the kind of thing that\nsilently breaks a CI step with no code change to blame. Pinned explicitly\nso every license-issuing/support-workflow run stays reproducible.",
-  "released_at": "2026-10-18",
+  "latest_version": "2.0.76",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.76/gsmtool-2.0.76.zip",
+  "release_notes": "Fix custom fields disappearing after syncing some services\n\nA recent fix for duplicate serial-number boxes on reconnected services\nwas too broad: if a supplier's current service list didn't include\nfield requirements for a service (which can happen even when the\nservice genuinely needs one), syncing that service's custom fields\nwould remove the field entirely instead of leaving it alone, leaving\nthe order form with no input at all. The cleanup now only runs when\nwe've actually confirmed a replacement field from the supplier, so an\nincomplete response can no longer wipe a field with nothing to show\nfor it.",
+  "released_at": "2026-10-21",
   "min_php": "8.1"
 }
