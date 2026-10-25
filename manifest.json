@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.76",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.76/gsmtool-2.0.76.zip",
-  "release_notes": "Fix custom fields disappearing after syncing some services\n\nA recent fix for duplicate serial-number boxes on reconnected services\nwas too broad: if a supplier's current service list didn't include\nfield requirements for a service (which can happen even when the\nservice genuinely needs one), syncing that service's custom fields\nwould remove the field entirely instead of leaving it alone, leaving\nthe order form with no input at all. The cleanup now only runs when\nwe've actually confirmed a replacement field from the supplier, so an\nincomplete response can no longer wipe a field with nothing to show\nfor it.",
-  "released_at": "2026-10-21",
+  "latest_version": "2.0.77",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.77/gsmtool-2.0.77.zip",
+  "release_notes": "Fix custom fields disappearing on some server-based services\n\nA handful of \"credits for existing account\" style services could lose\ntheir username field entirely after a supplier refreshed their\ncatalog -- leaving the order form with nothing to fill in, so orders\nhad no way to say which account to credit. This happened specifically\nwhen a supplier's field requirements hadn't been re-fetched yet (for\nexample right after they moved to a new platform), which the sync\nwas treating the same as \"this service needs no extra information\"\nand clearing the field as a result. It no longer does that -- an\nexisting field is now left alone until the supplier's current\nrequirements are actually known again.\n\nEighteen affected services have had their field restored, and one\naffected order has been identified for manual follow-up.",
+  "released_at": "2026-10-25",
   "min_php": "8.1"
 }
