@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.77",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.77/gsmtool-2.0.77.zip",
-  "release_notes": "Fix custom fields disappearing on some server-based services\n\nA handful of \"credits for existing account\" style services could lose\ntheir username field entirely after a supplier refreshed their\ncatalog -- leaving the order form with nothing to fill in, so orders\nhad no way to say which account to credit. This happened specifically\nwhen a supplier's field requirements hadn't been re-fetched yet (for\nexample right after they moved to a new platform), which the sync\nwas treating the same as \"this service needs no extra information\"\nand clearing the field as a result. It no longer does that -- an\nexisting field is now left alone until the supplier's current\nrequirements are actually known again.\n\nEighteen affected services have had their field restored, and one\naffected order has been identified for manual follow-up.",
-  "released_at": "2026-10-25",
+  "latest_version": "2.0.78",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.78/gsmtool-2.0.78.zip",
+  "release_notes": "Add a server-side safety net for Stripe payment confirmations\n\nCredits were applied only when a customer's browser made it back to\nour site after paying through Stripe. If that final step didn't\ncomplete -- a closed tab, a lost connection, an app that didn't\nreturn control to the browser -- the payment succeeded on Stripe's\nside but credits were never added, with no way for us to find out.\n\nStripe can now notify us directly once a payment is confirmed, so\ncredits are applied even if the browser never returns. This runs\nalongside the existing flow rather than replacing it, with a guard\nin place so a payment is never credited twice.",
+  "released_at": "2026-10-28",
   "min_php": "8.1"
 }
