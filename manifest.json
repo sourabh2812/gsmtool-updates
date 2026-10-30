@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.78",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.78/gsmtool-2.0.78.zip",
-  "release_notes": "Add a server-side safety net for Stripe payment confirmations\n\nCredits were applied only when a customer's browser made it back to\nour site after paying through Stripe. If that final step didn't\ncomplete -- a closed tab, a lost connection, an app that didn't\nreturn control to the browser -- the payment succeeded on Stripe's\nside but credits were never added, with no way for us to find out.\n\nStripe can now notify us directly once a payment is confirmed, so\ncredits are applied even if the browser never returns. This runs\nalongside the existing flow rather than replacing it, with a guard\nin place so a payment is never credited twice.",
-  "released_at": "2026-10-28",
+  "latest_version": "2.0.79",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.79/gsmtool-2.0.79.zip",
+  "release_notes": "Fix orders getting stuck indefinitely with some suppliers\n\nAn order could be marked as sent to the supplier but never move\nforward or show up for review, with no indication anything had gone\nwrong -- it just stopped appearing anywhere. This happened when a\nsupplier confirmed receiving the order but didn't return a tracking\nreference for it, a combination the dispatch process had no way to\nhandle, so the order was silently skipped on every run after that.\n\nThese orders are now flagged for manual review instead of\ndisappearing, so they can be checked and completed by hand rather\nthan sitting unprocessed indefinitely.",
+  "released_at": "2026-10-30",
   "min_php": "8.1"
 }
