@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.79",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.79/gsmtool-2.0.79.zip",
-  "release_notes": "Fix orders getting stuck indefinitely with some suppliers\n\nAn order could be marked as sent to the supplier but never move\nforward or show up for review, with no indication anything had gone\nwrong -- it just stopped appearing anywhere. This happened when a\nsupplier confirmed receiving the order but didn't return a tracking\nreference for it, a combination the dispatch process had no way to\nhandle, so the order was silently skipped on every run after that.\n\nThese orders are now flagged for manual review instead of\ndisappearing, so they can be checked and completed by hand rather\nthan sitting unprocessed indefinitely.",
+  "latest_version": "2.0.80",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.80/gsmtool-2.0.80.zip",
+  "release_notes": "Harden the reseller API against abuse and fix an order-stuck bug\n\nAPI (both the main API and the GSM Fusion-to-GSM Fusion endpoint):\n- Fixed a flaw that let a reseller get far more orders filled than their\n  balance should allow by sending many requests at the same moment\n- Closed a gap where one reseller could potentially view another\n  reseller's completed order, including the delivered unlock code\n- Made login attempts much harder to guess automatically, with a short\n  cool-down after repeated failed attempts\n- Removed an old backdoor-style default login and a leftover sample\n  credential from the API code\n- Updated the API sample code and the API Documentation PDF with the two\n  new \"please retry\" messages resellers may now see\n\nAlso included: orders that got stuck indefinitely with some suppliers\nnow get a clear reason and a retry option instead of looping forever.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
   "released_at": "2026-10-30",
   "min_php": "8.1"
 }
