@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.83",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.83/gsmtool-2.0.83.zip",
-  "release_notes": "Fix: skip license check entirely for unencrypted installs\n\nlicense_guard.php was enforcing license.json on every client page load\nwith no exemption for unencrypted (non-bolt) installs, breaking any\ninstall that predates the check or never needed one -- including our\nown xpertsgsm.com/xpertunlock.com production sites and local dev.\nLicensing only makes sense for the encrypted distribution customers\nreceive; mirrors the same bolt_decrypt() guard db_c_n_f_g.php already\nuses for its own license fetch.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "latest_version": "2.0.84",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.84/gsmtool-2.0.84.zip",
+  "release_notes": "Fix: detect encrypted install by file content, not extension presence\n\nfunction_exists('bolt_decrypt') alone was wrong: a VPS can have bolt.so\nloaded while still serving plain, unencrypted source (xpertunlock.com\ndoes exactly this), so the previous fix still blocked it. Check whether\nthe actual requested entry script starts with the bolt stub instead --\nthe same per-file signature db_c_n_f_g.php's _GsmTK::g() already checks\nfor the same reason.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
   "released_at": "2026-11-04",
   "min_php": "8.1"
 }
