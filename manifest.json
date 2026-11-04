@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.82",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.82/gsmtool-2.0.82.zip",
-  "release_notes": "Fix two bugs that could block customer logins by country\n\n- Fixed: the \"restrict login by country\" feature used a free lookup\n  service that was quietly shut down by its provider. Since then, any\n  customer whose account had this restriction turned on could see\n  \"Your Country IP does not match with our records\" and be unable to\n  log in at all, regardless of where they actually were. The lookup\n  now checks several sources in order and, if none of them can be\n  reached, simply skips the restriction for that login instead of\n  blocking the customer -- a lookup failure can no longer lock anyone\n  out.\n- Fixed: the \"Apply Country IP Restriction At Client's Login\" switch\n  in Settings was wired backwards. Turning it on actually removed the\n  restriction for every customer, and turning it off actually applied\n  it to every customer -- the opposite of what the switch says. It now\n  does what it says.",
-  "released_at": "2026-11-02",
+  "latest_version": "2.0.83",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.83/gsmtool-2.0.83.zip",
+  "release_notes": "Fix: skip license check entirely for unencrypted installs\n\nlicense_guard.php was enforcing license.json on every client page load\nwith no exemption for unencrypted (non-bolt) installs, breaking any\ninstall that predates the check or never needed one -- including our\nown xpertsgsm.com/xpertunlock.com production sites and local dev.\nLicensing only makes sense for the encrypted distribution customers\nreceive; mirrors the same bolt_decrypt() guard db_c_n_f_g.php already\nuses for its own license fetch.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "released_at": "2026-11-04",
   "min_php": "8.1"
 }
