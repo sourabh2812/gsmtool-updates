@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.84",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.84/gsmtool-2.0.84.zip",
-  "release_notes": "Fix: detect encrypted install by file content, not extension presence\n\nfunction_exists('bolt_decrypt') alone was wrong: a VPS can have bolt.so\nloaded while still serving plain, unencrypted source (xpertunlock.com\ndoes exactly this), so the previous fix still blocked it. Check whether\nthe actual requested entry script starts with the bolt stub instead --\nthe same per-file signature db_c_n_f_g.php's _GsmTK::g() already checks\nfor the same reason.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
-  "released_at": "2026-11-04",
+  "latest_version": "2.0.85",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.85/gsmtool-2.0.85.zip",
+  "release_notes": "Fix: Wise/Zelle reconcile crons can double-credit a duplicate invoice\n\nThe amount-only (no-reference) auto-match passes in wise_reconcile.php and\nzelle_reconcile.php had no way to know a deposit had already been accounted\nfor when an admin manually approved a duplicate invoice by hand instead of\nthrough the automated flow \u2014 nothing updates the cron's own idempotency\nstate (TransactionId / the IMAP claimed flag) in that case. The cron would\nthen \"discover\" the same still-unclaimed deposit again and auto-credit a\nsecond, pending, same-amount invoice from the same customer.\n\nAdd a shared guard (gf_payment_user_recently_settled) that every guess-based\nmatch (amount-only, or Zelle's memo-username match) now checks first: if the\nsame user already has another paid invoice on this payment method for the\nsame amount, within the same match window, leave the new invoice pending for\nmanual review instead of crediting it again. Explicit reference matches\n(the deposit literally names the invoice) are untouched \u2014 that's independent\nevidence, not a guess.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "released_at": "2026-11-09",
   "min_php": "8.1"
 }
