@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.86",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.86/gsmtool-2.0.86.zip",
-  "release_notes": "Fix: email logo sent as cid-embedded attachment instead of rendering inline\n\nsendMail() embedded the site logo as a MIME inline image (addEmbeddedImage +\ncid: rewrite) so it would still show up for recipients blocking remote images.\nSome webmail clients (observed on Gmail) fail to resolve the cid: reference\nand instead surface the embedded file as a literal email attachment, with the\nlogo's alt text shown as broken link text in its place.\n\nLogo now stays a plain remote <img src> built by finalEmailMessage(), same as\nany other image in the email body -- no MIME attachment involved.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "latest_version": "2.0.87",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.87/gsmtool-2.0.87.zip",
+  "release_notes": "Fix: server-order placement/status-check silently fails when a supplier drops the legacy action pair\n\nplaceserverorder/getserverorder were never part of the official DHRU Fusion\nAPI standard -- only placeimeiorder/getimeiorder are. Some suppliers that\nused to support the server-order pair as a vendor extension have dropped it,\nso placing or checking a server order now returns \"Command Not Found\" even\nthough the same account/credentials still work fine against the standard\naction pair, and nothing on our side surfaces this as an error.\n\nBoth server-order call sites now retry once against the standard\nplaceimeiorder/getimeiorder action -- same request payload, same\nSUCCESS/ERROR response shape -- whenever the first attempt is specifically\nrejected with \"Command Not Found\", before giving up.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
   "released_at": "2026-11-10",
   "min_php": "8.1"
 }
