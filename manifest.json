@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.85",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.85/gsmtool-2.0.85.zip",
-  "release_notes": "Fix: Wise/Zelle reconcile crons can double-credit a duplicate invoice\n\nThe amount-only (no-reference) auto-match passes in wise_reconcile.php and\nzelle_reconcile.php had no way to know a deposit had already been accounted\nfor when an admin manually approved a duplicate invoice by hand instead of\nthrough the automated flow \u2014 nothing updates the cron's own idempotency\nstate (TransactionId / the IMAP claimed flag) in that case. The cron would\nthen \"discover\" the same still-unclaimed deposit again and auto-credit a\nsecond, pending, same-amount invoice from the same customer.\n\nAdd a shared guard (gf_payment_user_recently_settled) that every guess-based\nmatch (amount-only, or Zelle's memo-username match) now checks first: if the\nsame user already has another paid invoice on this payment method for the\nsame amount, within the same match window, leave the new invoice pending for\nmanual review instead of crediting it again. Explicit reference matches\n(the deposit literally names the invoice) are untouched \u2014 that's independent\nevidence, not a guess.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
-  "released_at": "2026-11-09",
+  "latest_version": "2.0.86",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.86/gsmtool-2.0.86.zip",
+  "release_notes": "Fix: email logo sent as cid-embedded attachment instead of rendering inline\n\nsendMail() embedded the site logo as a MIME inline image (addEmbeddedImage +\ncid: rewrite) so it would still show up for recipients blocking remote images.\nSome webmail clients (observed on Gmail) fail to resolve the cid: reference\nand instead surface the embedded file as a literal email attachment, with the\nlogo's alt text shown as broken link text in its place.\n\nLogo now stays a plain remote <img src> built by finalEmailMessage(), same as\nany other image in the email body -- no MIME attachment involved.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "released_at": "2026-11-10",
   "min_php": "8.1"
 }
