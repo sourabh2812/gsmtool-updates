@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.90",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.90/gsmtool-2.0.90.zip",
-  "release_notes": "Fix: same duplicate-settlement false positive in Wise reconcile\n\nwise_reconcile.php's amount-only fallback pass had the identical blind spot\njust fixed in zelle_reconcile.php: gf_payment_user_recently_settled() blocks\ncrediting a pending invoice whenever the same user already has another settled\ninvoice at the same amount/currency/method nearby, with no way to tell a\ngenuine repeat payment apart from the same deposit being misattributed twice.\n\nReuses the gf_zelle_distinct_settlement() override added for Zelle (logic is\npayment-method-agnostic -- it just compares TransactionId references) at\nWise's one equivalent call site.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
-  "released_at": "2026-11-22",
+  "latest_version": "2.0.91",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.91/gsmtool-2.0.91.zip",
+  "release_notes": "Fix: duplicate invoices from a double-submitted payment page stuck a real deposit as unpaid forever\n\nWhen a customer accidentally created two identical pending invoices (e.g. a double\nclick on \"Add Funds\") and then sent one real payment, the Zelle/Wise reconcilers\nrefused to credit either invoice, since they couldn't tell which one the deposit\nbelonged to -- leaving a real payment stuck as unpaid indefinitely.\n\nAdd gf_payment_tiebreak_invoice(): when several pending invoices tie on amount (and,\nwhere checked, timing) and all belong to the same user, crediting the oldest one is\nprovably safe -- each deposit is consumed exactly once, so the wallet that receives\nthe money is identical no matter which tied invoice absorbs it. A tie spanning more\nthan one user is still left for manual review, since picking wrong there would credit\nthe wrong person.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "released_at": "2026-11-23",
   "min_php": "8.1"
 }
