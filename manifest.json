@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.91",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.91/gsmtool-2.0.91.zip",
-  "release_notes": "Fix: duplicate invoices from a double-submitted payment page stuck a real deposit as unpaid forever\n\nWhen a customer accidentally created two identical pending invoices (e.g. a double\nclick on \"Add Funds\") and then sent one real payment, the Zelle/Wise reconcilers\nrefused to credit either invoice, since they couldn't tell which one the deposit\nbelonged to -- leaving a real payment stuck as unpaid indefinitely.\n\nAdd gf_payment_tiebreak_invoice(): when several pending invoices tie on amount (and,\nwhere checked, timing) and all belong to the same user, crediting the oldest one is\nprovably safe -- each deposit is consumed exactly once, so the wallet that receives\nthe money is identical no matter which tied invoice absorbs it. A tie spanning more\nthan one user is still left for manual review, since picking wrong there would credit\nthe wrong person.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
-  "released_at": "2026-11-23",
+  "latest_version": "2.0.92",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.92/gsmtool-2.0.92.zip",
+  "release_notes": "Fix: email validation rejected valid addresses with TLDs longer than 4 letters\n\nisValidEmail() in both the admin panel and customer-facing JS capped the TLD at\n4 letters, a regex written before TLDs like .online, .company, or .international\nexisted. Any genuinely valid email using one of these was silently rejected on\nsave/register with \"please enter a valid email\", even though the address was\nfine. The server-side PHP validator already had no such limit.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "released_at": "2026-11-24",
   "min_php": "8.1"
 }
