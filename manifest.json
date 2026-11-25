@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.96",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.96/gsmtool-2.0.96.zip",
-  "release_notes": "Trust an exact username match as much as an exact email match for auto-create\n\nThe auto-create-new-invoice path for an unsolicited Zelle deposit only trusted an\nexact email match in the memo, not an exact username match, even though usernames\nare just as unique per account as emails are. A deposit memo naming the customer's\nusername but citing an amount with no matching pending invoice (or an old, already-\nclosed invoice number) had no path to get credited automatically and needed manual\nadmin intervention every time.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "latest_version": "2.0.97",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.97/gsmtool-2.0.97.zip",
+  "release_notes": "Add reference-based username/email matching to the Wise reconciler\n\nWise deposits carry a sender payment reference, same as Zelle memos, but the Wise\nreconciler never looked at it -- only an explicit GSMF-<id> reference or a pure\namount+timing guess could credit an invoice. A deposit whose reference named the\naccount by username or email, with no matching pending invoice (or only an old,\nalready-closed one), had no path to get credited automatically.\n\nAdded the same pass the Zelle reconciler already has: an exact username or email\nmatch in the reference is trusted enough to credit a pending invoice at that\namount, or auto-create one if none exists, same as an admin would by hand. The\nusername/email extraction helper moved from zelle_reconcile.php into functions.php\nso both reconcilers share one implementation.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
   "released_at": "2026-11-25",
   "min_php": "8.1"
 }
