@@ -1,7 +1,7 @@
 {
-  "latest_version": "2.0.92",
-  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.92/gsmtool-2.0.92.zip",
-  "release_notes": "Fix: email validation rejected valid addresses with TLDs longer than 4 letters\n\nisValidEmail() in both the admin panel and customer-facing JS capped the TLD at\n4 letters, a regex written before TLDs like .online, .company, or .international\nexisted. Any genuinely valid email using one of these was silently rejected on\nsave/register with \"please enter a valid email\", even though the address was\nfine. The server-side PHP validator already had no such limit.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
-  "released_at": "2026-11-24",
+  "latest_version": "2.0.95",
+  "download_url": "https://github.com/sourabh2812/gsmtool-updates/releases/download/v2.0.95/gsmtool-2.0.95.zip",
+  "release_notes": "Simplify: use placeimeiorder/getimeiorder directly for server orders, drop the retry\n\nplaceserverorder/getserverorder were never the real DHRU Fusion standard, only a\nvendor extension. Two suppliers (ifoneunlock.com, PaidUnlock) have now dropped it\nand needed the fallback retry to placeimeiorder/getimeiorder, which always worked.\nNo currently active supplier has succeeded via placeserverorder without that\nfallback, so call the standard action directly instead of trying the extension\nfirst and retrying on rejection.\n\nClaude-Session: https://claude.ai/code/session_0115GVP2ZFboDBLuz29F7B3q",
+  "released_at": "2026-11-25",
   "min_php": "8.1"
 }
